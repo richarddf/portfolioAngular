@@ -1,1 +1,199 @@
-/* You can add global styles to this file, and also import other style files */
+body{
+    font-size: 16px; /* 1rem = 10px */
+    /* font-family: 'Krub', sans-serif !important; */
+    font-family:'Courier New', Courier, monospace;
+}
+
+.colorFondo{
+    background-color:#63970b;
+    opacity: 0.9;
+}
+
+.colorFondo:hover{
+    opacity: 1;
+}
+
+.colorFondo2{
+    background-color:#f4aa0c;
+    opacity: 0.8;
+}
+
+.colorBoton{
+    color: #7c590c !important;;
+    opacity: 0.5;
+}
+
+.colorBoton:hover{
+    opacity: 0.8;
+}
+
+.colorFondo2:hover{
+    opacity: 1;
+}
+
+.logoAP {
+    width: 8rem;
+}
+
+.redesSociales{
+    /*margin: 14px auto;*/
+    width: 38px;
+}
+
+.fa-brands.fa-codepen.fa-xl:hover {
+	--bs-text-opacity: 1;
+	color:#4141fd!important;
+    font-size: 2em;
+}
+.fa-brands.fa-github.fa-xl:hover{
+    --bs-text-opacity: 1;
+	color:darkslateblue!important;
+    font-size: 2em;
+}
+
+.fa-brands.fa-twitter.fa-xl:hover{
+    --bs-text-opacity: 1;
+	color:deepskyblue!important;
+    font-size: 2em;
+}
+
+.fa-brands.fa-linkedin.fa-xl:hover{
+    --bs-text-opacity: 1;
+	color:darkorange!important;
+    font-size: 2em;
+}
+
+.fa-solid.fa-user-lock.fa-xl:hover{
+    --bs-text-opacity: 1;
+	color:gold!important;
+    font-size: 2em;
+}
+
+.fa-solid.fa-right-from-bracket.fa-xl:hover{
+    --bs-text-opacity: 1;
+	color:rgba(58, 239, 233, 0.769)!important;
+    font-size: 2em;
+}
+
+
+.circulo{
+    border-radius: 50%;
+    border-style: outset;
+    border-width: 3px;
+    border-color: #63970b; 
+    box-shadow: 10px;
+    size: 30%;
+}
+
+.acercaDe h4{
+    color: midnightblue;
+    font-weight: 700;
+}
+
+.titulosSecciones h4{
+    color: #ffffff;
+    font-weight: 700;
+    font-size: large;
+}
+
+.colorOrg{
+    color: midnightblue;
+    font-weight: 400;
+}
+
+.tamañoLogo{
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    height: auto;
+    width: 25%;
+    
+    /* object-fit: cover;   */
+}
+
+.cuadro{
+    color: #44449f;
+    margin-bottom: 1rem;
+    border-radius: 2rem;
+}
+
+.cuadro:hover{
+    border-color: #63970b;
+    border-style: double;
+    box-shadow: 5px;
+    border-radius: 2rem;
+}
+
+.fade{
+    opacity: 0.8;
+    border: 10px solid #eee;
+    -webkit-box-reflect: below 0px 
+    -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(.7, transparent), to(rgba(0,0,0,0.1)));
+}
+
+section.banner{
+    background-image: url("./assets/img/villanougues1.jpg"); 
+    width: 100%;
+    height: 100vh; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 4rem;
+}
+
+.tituloBanner{
+    text-align: center;
+    padding-top: 1rem;
+    font-weight: 600;
+    color:midnightblue;
+}
+
+.piePagina{
+    font-size: small;
+    text-align: center;
+}
+
+.containerMio{
+	width: 95%;
+	margin: 0 auto;
+	background: #fff;
+	padding-top: 10px;
+}
+
+.figura{
+	width: 32%;
+	float: left;
+	margin-bottom: 10px;
+	margin-left: 1%;
+}
+
+.figura img{
+    width: 100%;
+    border-radius: 15px;
+}
+
+.figura img:hover{
+	filter: grayscale(100%);
+    width: 101%;
+	-webkit-filter: grayscale(100%);
+}
+
+.tituloFigura{
+	text-align: center;
+	font-size: 12px;
+	font-weight: bold;
+}
+/* EFECTOS ESPECIALES Y FILTROS*/
+
+.desenfoque{
+	filter: blur(2px);
+	-webkit-filter: blur(2px);
+}
+
+.grises{
+	filter: grayscale(100%);
+	-webkit-filter: grayscale(100%);
+}
+
+.grises:hover{
+	filter: grayscale(0%);
+	-webkit-filter: grayscale(0%);
+}
