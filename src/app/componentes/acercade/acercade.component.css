@@ -1,0 +1,10 @@
+.acercaDe h4{
+    color: midnightblue;
+    font-weight: 700;
+}
+.circulo{
+    border-radius: 50%;
+    border: 0.2rem solid #f8c962;
+    /* border: 0.5rem solid #63970b; */
+    size: 30%;
+}

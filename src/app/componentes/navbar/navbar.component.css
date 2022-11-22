@@ -1,0 +1,37 @@
+.logoAP {
+    width: 7rem;
+}
+.fa-brands.fa-codepen.fa-xl:hover {
+	--bs-text-opacity: 1;
+	color:#4141fd!important;
+    font-size: 2em;
+}
+.fa-brands.fa-github.fa-xl:hover{
+    --bs-text-opacity: 1;
+	color:darkslateblue!important;
+    font-size: 2em;
+}
+
+.fa-brands.fa-twitter.fa-xl:hover{
+    --bs-text-opacity: 1;
+	color:deepskyblue!important;
+    font-size: 2em;
+}
+
+.fa-brands.fa-linkedin.fa-xl:hover{
+    --bs-text-opacity: 1;
+	color:darkorange!important;
+    font-size: 2em;
+}
+
+.fa-solid.fa-user-lock.fa-xl:hover{
+    --bs-text-opacity: 1;
+	color:gold!important;
+    font-size: 2em;
+}
+
+.fa-solid.fa-right-from-bracket.fa-xl:hover{
+    --bs-text-opacity: 1;
+	color:rgba(58, 239, 233, 0.769)!important;
+    font-size: 2em;
+}

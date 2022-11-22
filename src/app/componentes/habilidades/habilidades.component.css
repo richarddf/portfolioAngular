@@ -1,0 +1,19 @@
+.tamañoLogo{
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    height: auto;
+    width: 25%;
+}
+
+.cuadro{
+    color: #44449f;
+    margin-bottom: 1rem;
+    border-radius: 2rem;
+}
+
+.cuadro:hover{
+    border-color: #63970b;
+    border-style: double;
+    box-shadow: 5px;
+    border-radius: 2rem;
+}

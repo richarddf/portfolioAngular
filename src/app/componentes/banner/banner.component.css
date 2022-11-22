@@ -1,0 +1,10 @@
+.banner img {
+    width: 100%;
+}
+
+.tituloBanner{
+    text-align: center;
+    padding-top: 1rem;
+    font-weight: 600;
+    color:midnightblue;
+}
