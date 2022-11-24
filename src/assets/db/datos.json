@@ -26,10 +26,10 @@
             "direccion":"Av. Mitre 686 - 1º Piso - San Miguel de Tucumán, Argentina",
             "posicion":"Administrativo Contable",
             "fechainicio":"01-02-1998",
-            "fechafin":"31-09-2001"
+            "fechafin":"30-09-2001"
         }
     ],
-    "educaciones":[
+    "estudios":[
         {
             "id":1,
             "institucion":"Universidad Nacional de Catamarca",
@@ -111,5 +111,4 @@
             "descripcion":"Intermedio"
         }
     ]
-
 }
