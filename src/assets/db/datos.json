@@ -3,8 +3,113 @@
     "titulo":"Desarrollador Fullstack Jr.",
     "imagenPerfil": "../assets/img/fotoPerfil.jpg",
     "descripcion":"Me gusta la programación y hoy en día debido a la evolución de nuevas tecnologías, es imprescindible continuar con el avance de las mismas, para eso uno también tiene que evolucionar, aprendiendo y actualizandose en dichas habilidades, ya que es preciso para poder alcanzar nuevas metas no tan solo a nivel personal sino también profesional.",
-    "experiencias":[{
-        
-    }]
+    "experiencias":[
+        {
+            "id":1,
+            "institucion":"Centro de Formación Profesional N° 1",
+            "direccion":"Ayacucho 848 - San Miguel de Tucumán, Argentina",
+            "posicion":"Docente",
+            "fechainicio":"15-03-2015",
+            "fechafin":"31-12-2022"
+        },
+        {
+            "id":2,
+            "institucion":"Junta de Clasificación Técnica, Agrotécnica y Ed. No Formal",
+            "direccion":"Calle Córdoba 757 - 1° Piso - San Miguel de Tucumán, Argentina",
+            "posicion":"Referente Informatico",
+            "fechainicio":"01-12-2006",
+            "fechafin":"31-12-2022"
+        },
+        {
+            "id":3,
+            "institucion":"Estudio Contable Auad",
+            "direccion":"Av. Mitre 686 - 1º Piso - San Miguel de Tucumán, Argentina",
+            "posicion":"Administrativo Contable",
+            "fechainicio":"01-02-1998",
+            "fechafin":"31-09-2001"
+        }
+    ],
+    "educaciones":[
+        {
+            "id":1,
+            "institucion":"Universidad Nacional de Catamarca",
+            "direccion":"Avda. Belgrano al 300 - San Fernando del Valle de Catamarca, Argentina",
+            "titulo":"Profesor Universitario en Computación",
+            "fechainicio":"01-03-2010",
+            "fechafin":"31-12-2014"
+        },
+        {
+            "id":2,
+            "institucion":"Universidad Tecnológica Nacional - Facultad Regional Tucumán",
+            "direccion":"Rivadavia 1050, San Miguel de Tucumán - Argentina",
+            "titulo":"Ingeniero en Sistemas de Información",
+            "fechainicio":"01-02-1992",
+            "fechafin":"10-05-2002"
+        },
+        {
+            "id":3,
+            "institucion":"Instituto San Marcos",
+            "direccion":"Muñecas 385, San Miguel de Tucumán - Argentina",
+            "titulo":"Bachiller",
+            "fechainicio":"01-03-1987",
+            "fechafin":"30-11-1991"
+        }
+    ],
+    "habilidades":[
+        {
+            "id":1,
+            "url":"../assets/img/logo_html_512c.png",
+            "porcentaje":40,
+            "descripcion":"Principiante - Intermedio"
+        },
+        {
+            "id":2,
+            "url":"../assets/img/logo_css_512c.png",
+            "porcentaje":25,
+            "descripcion":"Principiante"
+        },
+        {
+            "id":3,
+            "url":"../assets/img/logo_bootstrap_512c.png",
+            "porcentaje":25,
+            "descripcion":"Principiante"
+        },
+        {
+            "id":4,
+            "url":"../assets/img/logo_angular_512c.png",
+            "porcentaje":15,
+            "descripcion":"Principiante"
+        },
+        {
+            "id":5,
+            "url":"../assets/img/logo_JS_512c.png",
+            "porcentaje":25,
+            "descripcion":"Principiante"
+        },
+        {
+            "id":6,
+            "url":"../assets/img/logo_TS_512c.png",
+            "porcentaje":25,
+            "descripcion":"Principiante"
+        },
+        {
+            "id":7,
+            "url":"../assets/img/logo_java_512c.png",
+            "porcentaje":50,
+            "descripcion":"Intermedio"
+        },
+        {
+            "id":8,
+            "url":"../assets/img/logo_springboot_512c.png",
+            "porcentaje":25,
+            "descripcion":"Principiante"
+        },
+        {
+            "id":9,
+            "url":"../assets/img/logo_mysql_512c.png",
+            "porcentaje":50,
+            "descripcion":"Intermedio"
+        }
+    ]
 
 }

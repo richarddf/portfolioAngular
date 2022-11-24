@@ -12,11 +12,13 @@ import { EducacionComponent } from './componentes/educacion/educacion.component'
 import { HabilidadesComponent } from './componentes/habilidades/habilidades.component';
 import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
 import { FooterComponent } from './componentes/footer/footer.component';
-import { ModalLoginComponent } from './componentes/modal-login/modal-login.component';
-import { ModalAcercadeComponent } from './componentes/modal-acercade/modal-acercade.component';
-import { ModalExperienciaComponent } from './componentes/modal-experiencia/modal-experiencia.component';
-import { ModalEducacionComponent } from './componentes/modal-educacion/modal-educacion.component';
-import { ModalHabilidadesComponent } from './componentes/modal-habilidades/modal-habilidades.component';
+import { IndexComponent } from './componentes/index/index.component';
+import { Pagina404Component } from './componentes/pagina404/pagina404.component';
+import { ModalLoginComponent } from './modales/modal-login/modal-login.component';
+import { ModalAcercadeComponent } from './modales/modal-acercade/modal-acercade.component';
+import { ModalExperienciaComponent } from './modales/modal-experiencia/modal-experiencia.component';
+import { ModalEducacionComponent } from './modales/modal-educacion/modal-educacion.component';
+import { ModalHabilidadComponent } from './modales/modal-habilidad/modal-habilidad.component';
 
 @NgModule({
   declarations: [
@@ -29,11 +31,13 @@ import { ModalHabilidadesComponent } from './componentes/modal-habilidades/modal
     HabilidadesComponent,
     ProyectosComponent,
     FooterComponent,
+    IndexComponent,
+    Pagina404Component,
     ModalLoginComponent,
     ModalAcercadeComponent,
     ModalExperienciaComponent,
     ModalEducacionComponent,
-    ModalHabilidadesComponent
+    ModalHabilidadComponent
   ],
   imports: [
     BrowserModule,
