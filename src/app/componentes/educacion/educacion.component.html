@@ -5,14 +5,14 @@
     </div>
     
     <div class="container">
-        <div class="row">
+        <div class="row" *ngFor="let estudio of estudios">
             <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 pt-2">
-                <p>Desde <strong>01-03-2010</strong> hasta <strong>31-12-2014</strong></p>
+                <p>Desde <strong>{{estudio.fechainicio}}</strong> hasta <strong>{{estudio.fechafin}}</strong></p>
             </div>
             <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 pt-2">
-                <h5 class="colorOrg">Universidad Nacional de Catamarca</h5>
-                <h6 class="center">Avda. Belgrano al 300 - San Fernando del Valle de Catamarca, Argentina</h6>
-                <p><strong>Título:</strong> Profesor Universitario en Computación</p>
+                <h5 class="colorOrg">{{estudio.institucion}}</h5>
+                <h6 class="center">{{estudio.direccion}}</h6>
+                <p><strong>Título:</strong> {{estudio.titulo}}</p>
             </div>
             <div class="col-xs-12 col-sm-1 col-md-1 col-lg-1 pt-2">
                 <!-- Button trigger modal - Boton para abrir formulario Educacion -->
@@ -23,48 +23,8 @@
                     <i class="fa-solid fa-trash fa-xl"></i>
                 </button>
             </div>
+            <hr>
         </div>
-        <hr>
-        <div class="row">
-            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 pt-2">
-                <p>Desde <strong>01-02-1992</strong> hasta <strong>10-05-2002</strong></p>
-            </div>
-            <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 pt-2">
-                <h5 class="colorOrg">Universidad Tecnológica Nacional - Facultad Regional Tucumán</h5>
-                <h6 class="center">Rivadavia 1050, San Miguel de Tucumán - Argentina</h6>
-                <p><strong>Título:</strong> Ingeniero en Sistemas de Información</p>
-            </div>
-            <div class="col-xs-12 col-sm-1 col-md-1 col-lg-1 pt-2">
-                <!-- Button trigger modal - Boton para abrir formulario Educacion -->
-                <button type="button" class="btn colorBoton" data-bs-toggle="modal" data-bs-target="#modalEducacion">
-                    <i class="fa-solid fa-pen-to-square fa-xl"></i>
-                </button>
-                <button type="button" class="btn colorBoton">
-                    <i class="fa-solid fa-trash fa-xl"></i>
-                </button>
-            </div>
-        </div>
-        <hr>
-        <div class="row">
-            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 pt-2">
-                <p>Desde <strong>01-03-1987</strong> hasta <strong>30-11-1991</strong></p>
-            </div>
-            <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 pt-2">
-                <h5 class="colorOrg">Instituto San Marcos</h5>
-                <h6 class="center">Muñecas 385, San Miguel de Tucumán - Argentina</h6>
-                <p><strong>Título:</strong> Bachiller</p>
-            </div>
-            <div class="col-xs-12 col-sm-1 col-md-1 col-lg-1 pt-2">
-                <!-- Button trigger modal - Boton para abrir formulario Educacion -->
-                <button type="button" class="btn colorBoton" data-bs-toggle="modal" data-bs-target="#modalEducacion">
-                    <i class="fa-solid fa-pen-to-square fa-xl"></i>
-                </button>
-                <button type="button" class="btn colorBoton">
-                    <i class="fa-solid fa-trash fa-xl"></i>
-                </button>
-            </div>
-        </div>
-        <hr>
     </div>
 </section>
 <app-modal-educacion></app-modal-educacion>

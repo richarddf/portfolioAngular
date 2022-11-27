@@ -59,55 +59,64 @@
         {
             "id":1,
             "url":"../assets/img/logo_html_512c.png",
-            "porcentaje":40,
+            "tecnologia":"Html5",
+            "porcentaje": "40%",
             "descripcion":"Principiante - Intermedio"
         },
         {
             "id":2,
             "url":"../assets/img/logo_css_512c.png",
-            "porcentaje":25,
+            "tecnologia":"Css3",
+            "porcentaje":"25%",
             "descripcion":"Principiante"
         },
         {
             "id":3,
             "url":"../assets/img/logo_bootstrap_512c.png",
-            "porcentaje":25,
+            "tecnologia":"Bootstrap",
+            "porcentaje":"25%",
             "descripcion":"Principiante"
         },
         {
             "id":4,
             "url":"../assets/img/logo_angular_512c.png",
-            "porcentaje":15,
+            "tecnologia":"Angular",
+            "porcentaje":"15%",
             "descripcion":"Principiante"
         },
         {
             "id":5,
             "url":"../assets/img/logo_JS_512c.png",
-            "porcentaje":25,
+            "tecnologia":"Javascript",
+            "porcentaje":"25%",
             "descripcion":"Principiante"
         },
         {
             "id":6,
             "url":"../assets/img/logo_TS_512c.png",
-            "porcentaje":25,
+            "tecnologia":"Typescript",
+            "porcentaje":"25%",
             "descripcion":"Principiante"
         },
         {
             "id":7,
             "url":"../assets/img/logo_java_512c.png",
-            "porcentaje":50,
+            "tecnologia":"Java",
+            "porcentaje":"50%",
             "descripcion":"Intermedio"
         },
         {
             "id":8,
             "url":"../assets/img/logo_springboot_512c.png",
-            "porcentaje":25,
+            "tecnologia":"Springboot",
+            "porcentaje":"25%",
             "descripcion":"Principiante"
         },
         {
             "id":9,
             "url":"../assets/img/logo_mysql_512c.png",
-            "porcentaje":50,
+            "tecnologia":"Mysql",
+            "porcentaje":"50%",
             "descripcion":"Intermedio"
         }
     ]

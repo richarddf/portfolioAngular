@@ -5,7 +5,7 @@
     </div>
     <div class="container mt-1 mb-1">
         <div class="row">
-            <div class="col-4 cuadro mx-auto shadow text-center">
+            <div class="col-4 cuadro mx-auto shadow text-center" *ngFor="let habilidad of habilidades">
                 <!-- Button trigger modal - Boton para abrir formulario Habilidades -->
                 <button type="button" class="btn colorBoton" data-bs-toggle="modal" data-bs-target="#modalHabilidad">
                     <i class="fa-solid fa-pen-to-square fa-lg"></i>
@@ -14,137 +14,14 @@
                     <i class="fa-solid fa-trash fa-lg"></i>
                 </button>
                 <br>
-                <img src="../assets/img/logo_html_512c.png" alt="Logo Html" class="tamañoLogo">
-                <div class="progress" style="height: 30px;">
-                    <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">40%</div>
+                <div>
+                    <p class="colorOrg mb-0">{{habilidad.tecnologia}}</p>
                 </div>
-                <p>Principiante - Intermedio</p>
-            </div>
-            <div class="col-4 cuadro mx-auto shadow text-center">
-                <!-- Button trigger modal - Boton para abrir formulario Educacion -->
-                <button type="button" class="btn colorBoton" data-bs-toggle="modal" data-bs-target="#modalHabilidad">
-                    <i class="fa-solid fa-pen-to-square fa-lg"></i>
-                </button>
-                <button type="button" class="btn colorBoton">
-                    <i class="fa-solid fa-trash fa-lg"></i>
-                </button>
-                <br>
-                <img src="../assets/img/logo_css_512c.png" alt="Logo CSS" class="tamañoLogo">
+                <img [src]="habilidad.url" [alt]="alternativo+habilidad.tecnologia" class="tamañoLogo">
                 <div class="progress" style="height: 30px;">
-                    <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                    <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" [style.width]="habilidad.porcentaje" aria-valuenow="habilidad.porcentaje" aria-valuemin="0" aria-valuemax="100">{{habilidad.porcentaje}}</div>
                 </div>
-                <p>Principiante</p>
-            </div>
-            <div class="col-4 cuadro mx-auto shadow text-center">
-                <!-- Button trigger modal - Boton para abrir formulario Educacion -->
-                <button type="button" class="btn colorBoton" data-bs-toggle="modal" data-bs-target="#modalHabilidad">
-                    <i class="fa-solid fa-pen-to-square fa-lg"></i>
-                </button>
-                <button type="button" class="btn colorBoton">
-                    <i class="fa-solid fa-trash fa-lg"></i>
-                </button>
-                <br>
-                <img src="../assets/img/logo_bootstrap_512c.png" alt="Logo Bootstrap" class="tamañoLogo">
-                <div class="progress" style="height: 30px;">
-                    <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
-                </div>
-                <p>Principiante</p>
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-4 cuadro mx-auto shadow text-center">
-                <!-- Button trigger modal - Boton para abrir formulario Educacion -->
-                <button type="button" class="btn colorBoton" data-bs-toggle="modal" data-bs-target="#modalHabilidad">
-                    <i class="fa-solid fa-pen-to-square fa-lg"></i>
-                </button>
-                <button type="button" class="btn colorBoton">
-                    <i class="fa-solid fa-trash fa-lg"></i>
-                </button>
-                <br>
-                <img src="../assets/img/logo_angular_512c.png" alt="Logo Html" class="tamañoLogo">
-                <div class="progress" style="height: 30px;">
-                    <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">15%</div>
-                </div>
-                <p>Principiante</p>
-            </div>
-            <div class="col-4 cuadro mx-auto shadow text-center">
-                <!-- Button trigger modal - Boton para abrir formulario Educacion -->
-                <button type="button" class="btn colorBoton" data-bs-toggle="modal" data-bs-target="#modalHabilidad">
-                    <i class="fa-solid fa-pen-to-square fa-lg"></i>
-                </button>
-                <button type="button" class="btn colorBoton">
-                    <i class="fa-solid fa-trash fa-lg"></i>
-                </button>
-                <br>
-                <img src="../assets/img/logo_JS_512c.png" alt="Logo CSS" class="tamañoLogo">
-                <div class="progress" style="height: 30px;">
-                    <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
-                </div>
-                <p>Principiante</p>
-            </div>
-            <div class="col-4 cuadro mx-auto shadow text-center">
-                <!-- Button trigger modal - Boton para abrir formulario Educacion -->
-                <button type="button" class="btn colorBoton" data-bs-toggle="modal" data-bs-target="#modalHabilidad">
-                    <i class="fa-solid fa-pen-to-square fa-lg"></i>
-                </button>
-                <button type="button" class="btn colorBoton">
-                    <i class="fa-solid fa-trash fa-lg"></i>
-                </button>
-                <br>
-                <img src="../assets/img/logo_TS_512c.png" alt="Logo Bootstrap" class="tamañoLogo">
-                <div class="progress" style="height: 30px;">
-                    <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
-                </div>
-                <p>Principiante</p>
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-4 cuadro mx-auto shadow text-center">
-                <!-- Button trigger modal - Boton para abrir formulario Educacion -->
-                <button type="button" class="btn colorBoton" data-bs-toggle="modal" data-bs-target="#modalHabilidad">
-                    <i class="fa-solid fa-pen-to-square fa-lg"></i>
-                </button>
-                <button type="button" class="btn colorBoton">
-                    <i class="fa-solid fa-trash fa-lg"></i>
-                </button>
-                <br>
-                <img src="../assets/img/logo_java_512c.png" alt="Logo Html" class="tamañoLogo">
-                <div class="progress" style="height: 30px;">
-                    <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
-                </div>
-                <p>Intermedio</p>
-            </div>
-            <div class="col-4 cuadro mx-auto shadow text-center">
-                <!-- Button trigger modal - Boton para abrir formulario Educacion -->
-                <button type="button" class="btn colorBoton" data-bs-toggle="modal" data-bs-target="#modalHabilidad">
-                    <i class="fa-solid fa-pen-to-square fa-lg"></i>
-                </button>
-                <button type="button" class="btn colorBoton">
-                    <i class="fa-solid fa-trash fa-lg"></i>
-                </button>
-                <br>
-                <img src="../assets/img/logo_springboot_512c.png" alt="Logo CSS" class="tamañoLogo">
-                <div class="progress" style="height: 30px;">
-                    <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
-                </div>
-                <p>Principiante</p>
-            </div>
-            <div class="col-4 cuadro mx-auto shadow text-center">
-                <!-- Button trigger modal - Boton para abrir formulario Educacion -->
-                <button type="button" class="btn colorBoton" data-bs-toggle="modal" data-bs-target="#modalHabilidad">
-                    <i class="fa-solid fa-pen-to-square fa-lg"></i>
-                </button>
-                <button type="button" class="btn colorBoton">
-                    <i class="fa-solid fa-trash fa-lg"></i>
-                </button>
-                <br>
-                <img src="../assets/img/logo_mysql_512c.png" alt="Logo Bootstrap" class="tamañoLogo">
-                <div class="progress" style="height: 30px;">
-                    <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
-                </div>
-                <p>Intermedio</p>
+                <p style="color:darkslateblue; font-size:small">{{habilidad.descripcion}}</p>
             </div>
         </div>
     </div>

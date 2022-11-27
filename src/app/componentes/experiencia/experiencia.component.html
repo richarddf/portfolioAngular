@@ -5,14 +5,14 @@
     </div>
     
     <div class="container">
-        <div class="row">
+        <div class="row" *ngFor="let experiencia of experiencias">
             <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 pt-2">
-                <p>Desde <strong>15-03-2015</strong> hasta <strong>31-12-2022</strong></p>
+                <p>Desde <strong>{{experiencia.fechainicio}}</strong> hasta <strong>{{experiencia.fechafin}}</strong></p>
             </div>
             <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 pt-2">
-                <h5 class="colorOrg">Centro de Formación Profesional N° 1</h5>
-                <h6 class="center">Ayacucho 848 - San Miguel de Tucumán, Argentina</h6>
-                <p><strong>Posición:</strong> Docente</p>
+                <h5 class="colorOrg">{{experiencia.institucion}}</h5>
+                <h6 class="center">{{experiencia.direccion}}</h6>
+                <p><strong>Posición:</strong> {{experiencia.posicion}}</p>
             </div>
             <div class="col-xs-12 col-sm-1 col-md-1 col-lg-1 pt-2">
                 <!-- Button trigger modal - Boton para abrir formulario Experiencia -->
@@ -23,48 +23,8 @@
                     <i class="fa-solid fa-trash fa-xl"></i>
                 </button>
             </div>
+            <hr>
         </div>
-        <hr>
-        <div class="row">
-            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 pt-2">
-                <p>Desde <strong>01-12-2006</strong> hasta <strong>31-12-2022</strong></p>
-            </div>
-            <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 pt-2">
-                <h5 class="colorOrg">Junta de Clasificación Técnica, Agrotécnica y Ed. No Formal</h5>
-                <h6 class="center">Calle Córdoba 757 - 1° Piso - San Miguel de Tucumán, Argentina</h6>
-                <p><strong>Posición:</strong> Referente Informatico</p>
-            </div>
-            <div class="col-xs-12 col-sm-1 col-md-1 col-lg-1 pt-2">
-                <!-- Button trigger modal - Boton para abrir formulario Experiencia -->
-                <button type="button" class="btn colorBoton" data-bs-toggle="modal" data-bs-target="#modalExperiencia">
-                    <i class="fa-solid fa-pen-to-square fa-xl"></i>
-                </button>
-                <button type="button" class="btn colorBoton">
-                    <i class="fa-solid fa-trash fa-xl"></i>
-                </button>
-            </div>
-        </div>
-        <hr>
-        <div class="row">
-            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 pt-2">
-                <p>Desde <strong>01-02-1998</strong> hasta <strong>30-09-2001</strong></p>
-            </div>
-            <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 pt-2">
-                <h5 class="colorOrg">Estudio Contable Auad</h5>
-                <h6 class="center">Av. Mitre 686 - 1º Piso - San Miguel de Tucumán, Argentina</h6>
-                <p><strong>Posición:</strong> Administrativo Contable</p>
-            </div>
-            <div class="col-xs-12 col-sm-1 col-md-1 col-lg-1 pt-2">
-                <!-- Button trigger modal - Boton para abrir formulario Experiencia -->
-                <button type="button" class="btn colorBoton" data-bs-toggle="modal" data-bs-target="#modalExperiencia">
-                    <i class="fa-solid fa-pen-to-square fa-xl"></i>
-                </button>
-                <button type="button" class="btn colorBoton">
-                    <i class="fa-solid fa-trash fa-xl"></i>
-                </button>
-            </div>
-        </div>
-        <hr>
     </div>
 </section>
 <app-modal-experiencia></app-modal-experiencia>

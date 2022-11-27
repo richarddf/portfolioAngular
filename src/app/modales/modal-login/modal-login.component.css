@@ -1,0 +1,9 @@
+.error{
+    color:red;
+    font-size:smaller;
+    font-style: italic;
+}
+
+.border-danger{
+    border-color: red;
+}

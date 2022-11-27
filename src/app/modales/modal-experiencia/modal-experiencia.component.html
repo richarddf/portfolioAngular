@@ -7,30 +7,59 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body p-5 pt-0">
-                <form class="row g-3">
+                <form [formGroup]="form" (ngSubmit)="onEnviar($event)" class="row g-3">
                     <div class="col-12">
                         <label for="inputInstitucion" class="form-label">Institución</label>
-                        <input type="text" class="form-control" id="inputInstitucion" placeholder="Nombre de la institución" required>
+                        <input type="text" formControlName="institucion" class="form-control" id="inputInstitucion" placeholder="Nombre de la institución" required>
+                    </div>
+                    <!-- Gracias al getter que configuramos en el controlador -->
+                    <div *ngIf="Institucion?.errors && Institucion?.touched">    
+                        <p *ngIf="Institucion?.hasError('required')" class="error">
+                            El Nombre de la Institución es requerido.
+                        </p>
                     </div>
                     <div class="col-12">
                         <label for="inputAddress" class="form-label">Dirección</label>
-                        <input type="text" class="form-control" id="inputAddress" placeholder="Calle, Avda ..." required>
+                        <input type="text" formControlName="direccion" class="form-control" id="inputAddress" placeholder="Calle, Avda ..." required>
+                    </div>
+                    <!-- Gracias al getter que configuramos en el controlador -->
+                    <div *ngIf="Direccion?.errors && Direccion?.touched">    
+                        <p *ngIf="Direccion?.hasError('required')" class="error">
+                            La Dirección es requerida.
+                        </p>
                     </div>
                     <div class="col-md-10">
                         <label for="inputPosicion" class="form-label">Posición</label>
-                        <input type="text" class="form-control" id="inputPosicion" placeholder="Encargado, administrativo" required>
+                        <input type="text" formControlName="posicion" class="form-control" id="inputPosicion" placeholder="Encargado, administrativo" required>
+                    </div>
+                    <!-- Gracias al getter que configuramos en el controlador -->
+                    <div *ngIf="Posicion?.errors && Posicion?.touched">    
+                        <p *ngIf="Posicion?.hasError('required')" class="error">
+                            La Posición dentro la empresa es requerida.
+                        </p>
                     </div>
                     <div class="col-4">
                         <label for="inputPeriodo" class="form-label">Fecha Inicio</label>
-                        <input type="date" class="form-control" id="inputFecInicio" placeholder="dd/mm/aaaa" required>
+                        <input type="date" formControlName="fechaInicio" class="form-control" id="inputFecInicio" placeholder="dd/mm/aaaa" required>
+                    </div>
+                    <!-- Gracias al getter que configuramos en el controlador -->
+                    <div *ngIf="FechaInicio?.errors && FechaInicio?.touched">    
+                        <p *ngIf="FechaInicio?.hasError('required')" class="error">
+                            La Fecha de Inicio es requerida.
+                        </p>
                     </div>
                     <div class="col-4">
                         <label for="inputPeriodo" class="form-label">Fecha Final</label>
-                        <input type="date" class="form-control" id="inputFecFinal" placeholder="dd/mm/aaaa" required>
+                        <input type="date" formControlName="fechaFin" class="form-control" id="inputFecFinal" placeholder="dd/mm/aaaa" required>
+                    </div>
+                    <!-- Gracias al getter que configuramos en el controlador -->
+                    <div *ngIf="FechaFin?.errors && FechaFin?.touched">    
+                        <p *ngIf="FechaFin?.hasError('required')" class="error">
+                            La Fecha de Finalización es requerida.
+                        </p>
                     </div>
                     <div class="col-md-12 d-grid gap-2 d-md-flex justify-content-md-end">
                         <button type="submit" class="btn btn-md rounded-3 btn-outline-success">Grabar</button>
-                        <button type="submit" class="btn btn-md rounded-3 btn-outline-success">Cancelar</button>
                     </div>
                 </form>
             </div>
