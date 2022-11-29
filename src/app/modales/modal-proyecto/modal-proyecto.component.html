@@ -1,0 +1,39 @@
+<!-- Formulario Modal Proyectos -->
+<div class="modal fade" id="modalProyectos" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content rounded-4 shadow">
+            <div class="modal-header p-5 pb-4 border-bottom-0">
+                <h1 class="fw-bold mb-0 fs-2">Proyectos</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-5 pt-0">
+                <form [formGroup]="form" (ngSubmit)="onEnviar($event)" class="row g-3">
+                    <div class="col-12">
+                        <label for="inputUrl" class="form-label">URL Imagen</label>
+                        <input type="url" formControlName="urlImgProyecto" class="form-control" id="inputUrl" placeholder="http://..." required>
+                    </div>
+                    <!-- Gracias al getter que configuramos en el controlador -->
+                    <div *ngIf="UrlImgProyecto?.errors && UrlImgProyecto?.touched">    
+                        <p *ngIf="UrlImgProyecto?.hasError('required')" class="error">
+                            El camino de la imágen del Proyecto es requerido.
+                        </p>
+                    </div>
+                    <div class="col-12">
+                        <label for="inputDescripcion" class="form-label">Descripción</label>
+                        <!-- <input type="text" class="form-control" id="inputDescripcion" placeholder="Descripción" required> -->
+                        <textarea formControlName="descripcion" class="form-control" name="" id="inputDescripcion" cols="30" rows="5" placeholder="Descripción" required></textarea>
+                    </div>
+                    <!-- Gracias al getter que configuramos en el controlador -->
+                    <div *ngIf="Descripcion?.errors && Descripcion?.touched">    
+                        <p *ngIf="Descripcion?.hasError('required')" class="error">
+                            La descripción es requerida.
+                        </p>
+                    </div>
+                    <div class="col-md-12 d-grid gap-2 d-md-flex justify-content-md-end">
+                        <button type="submit" class="btn btn-md rounded-3 btn-outline-success">Grabar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

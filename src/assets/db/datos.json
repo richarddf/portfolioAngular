@@ -119,5 +119,12 @@
             "porcentaje":"50%",
             "descripcion":"Intermedio"
         }
+    ],
+    "proyectos":[
+        {
+            "id":1,
+            "url":"../assets/img/PortfolioWeb.jpg",
+            "descripcion":"Proyecto Portfolio Web"
+        }
     ]
 }

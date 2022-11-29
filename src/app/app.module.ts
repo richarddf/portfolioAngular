@@ -20,6 +20,7 @@ import { ModalAcercadeComponent } from './modales/modal-acercade/modal-acercade.
 import { ModalExperienciaComponent } from './modales/modal-experiencia/modal-experiencia.component';
 import { ModalEducacionComponent } from './modales/modal-educacion/modal-educacion.component';
 import { ModalHabilidadComponent } from './modales/modal-habilidad/modal-habilidad.component';
+import { ModalProyectoComponent } from './modales/modal-proyecto/modal-proyecto.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { ModalHabilidadComponent } from './modales/modal-habilidad/modal-habilid
     ModalAcercadeComponent,
     ModalExperienciaComponent,
     ModalEducacionComponent,
-    ModalHabilidadComponent
+    ModalHabilidadComponent,
+    ModalProyectoComponent
   ],
   imports: [
     BrowserModule,

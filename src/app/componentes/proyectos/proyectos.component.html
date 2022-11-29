@@ -3,12 +3,23 @@
     <div class="container-fluid colorFondo2">
         <h4 class="pt-2 pb-2">Proyectos</h4>
     </div>
-    <div class="containerMio">
-        <div class="linea">
-            <div class="figura">
-                <p class="tituloFigura">Proyecto Bienes Raices</p>
-                <img src="../assets/img/BienesRaices.jpg" alt="Bienes Raices"/>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4" *ngFor="let proyecto of proyectos">
+                <div class="card" style="width: 29rem;">
+                    <img [src]="proyecto.url" class="card-img-top" [alt]="proyecto.descripcion">
+                    <div class="card-body">
+                        <p class="card-text">{{proyecto.descripcion}}</p>
+                    </div>
+                </div>
+                <button type="button" class="btn colorBoton" data-bs-toggle="modal" data-bs-target="#modalProyectos">
+                    <i class="fa-solid fa-pen-to-square fa-lg"></i>
+                </button>
+                <button type="button" class="btn colorBoton">
+                    <i class="fa-solid fa-trash fa-lg"></i>
+                </button>
             </div>
         </div>
     </div>
 </section>
+<app-modal-proyecto></app-modal-proyecto>
