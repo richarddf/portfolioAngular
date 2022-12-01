@@ -1,10 +1,19 @@
 <!-- Educacion -->
 <section class="titulosSecciones">
     <div class="container-fluid colorFondo2">
-        <h4 class="pt-2 pb-2">Educación</h4>
+        <div class="row">
+            <div class="col-xs-12 col-sm-11 col-md-11 col-lg-11 pt-2">
+                <h4 class="pt-2 pb-2">Educación</h4>
+            </div>
+            <div class="col-xs-12 col-sm-1 col-md-1 col-lg-1 pt-2">
+                <button type="button" class="btn text-white colorBotonAlta" data-bs-toggle="modal" data-bs-target="#modalEducacionAdd">
+                    <i class="fa-regular fa-square-plus fa-xl"></i>
+                </button>
+            </div>
+        </div>
     </div>
     
-    <div class="container">
+    <div class="container mt-3">
         <div class="row" *ngFor="let estudio of estudios">
             <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 pt-2">
                 <p>Desde <strong>{{estudio.fechainicio}}</strong> hasta <strong>{{estudio.fechafin}}</strong></p>
@@ -28,3 +37,4 @@
     </div>
 </section>
 <app-modal-educacion></app-modal-educacion>
+<app-modal-educacion-add></app-modal-educacion-add>

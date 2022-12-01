@@ -18,7 +18,7 @@ body{
 }
 
 .colorBoton{
-    color: #7c590c !important;;
+    color: #7c590c !important;
     opacity: 0.5;
 }
 
@@ -26,6 +26,10 @@ body{
     opacity: 0.8;
 }
 
+.colorBotonAlta:hover{
+    color: #422fed !important;
+    opacity: 0.8;
+}
 .colorFondo2:hover{
     opacity: 1;
 }

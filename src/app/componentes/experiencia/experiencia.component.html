@@ -1,10 +1,19 @@
 <!-- Experiencia -->
 <section class="titulosSecciones">
     <div class="container-fluid colorFondo2">
-        <h4 class="pt-2 pb-2">Experiencia</h4>
+        <div class="row">
+            <div class="col-xs-12 col-sm-11 col-md-11 col-lg-11 pt-2">
+                <h4 class="pt-2 pb-2">Experiencia</h4>
+            </div>
+            <div class="col-xs-12 col-sm-1 col-md-1 col-lg-1 pt-2">
+                <button type="button" class="btn text-white colorBotonAlta" data-bs-toggle="modal" data-bs-target="#modalExperienciaAdd">
+                    <i class="fa-regular fa-square-plus fa-xl"></i>
+                </button>
+            </div>
+        </div>
     </div>
-    
-    <div class="container">
+
+    <div class="container mt-3">
         <div class="row" *ngFor="let experiencia of experiencias">
             <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 pt-2">
                 <p>Desde <strong>{{experiencia.fechainicio}}</strong> hasta <strong>{{experiencia.fechafin}}</strong></p>
@@ -28,3 +37,4 @@
     </div>
 </section>
 <app-modal-experiencia></app-modal-experiencia>
+<app-modal-experiencia-add></app-modal-experiencia-add>

@@ -1,9 +1,19 @@
 <!-- Habilidades -->
 <section class="titulosSecciones">
     <div class="container-fluid colorFondo2">
-        <h4 class="pt-2 pb-2 mb-2">Habilidades</h4>
+        <div class="row">
+            <div class="col-xs-12 col-sm-11 col-md-11 col-lg-11 pt-2">
+                <h4 class="pt-2 pb-2">Habilidades</h4>
+            </div>
+            <div class="col-xs-12 col-sm-1 col-md-1 col-lg-1 pt-2">
+                <button type="button" class="btn text-white colorBotonAlta" data-bs-toggle="modal" data-bs-target="#modalHabilidadAdd">
+                    <i class="fa-regular fa-square-plus fa-xl"></i>
+                </button>
+            </div>
+        </div>
     </div>
-    <div class="container mt-1 mb-1">
+
+    <div class="container mt-3 mb-1">
         <div class="row">
             <div class="col-4 cuadro mx-auto shadow text-center" *ngFor="let habilidad of habilidades">
                 <!-- Button trigger modal - Boton para abrir formulario Habilidades -->
@@ -27,3 +37,4 @@
     </div>
 </section>
 <app-modal-habilidad></app-modal-habilidad>
+<app-modal-habilidad-add></app-modal-habilidad-add>
