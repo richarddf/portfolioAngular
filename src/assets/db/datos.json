@@ -3,6 +3,32 @@
     "titulo":"Desarrollador Fullstack Jr.",
     "imagenPerfil": "../assets/img/fotoPerfil.jpg",
     "descripcion":"Me gusta la programación y hoy en día debido a la evolución de nuevas tecnologías, es imprescindible continuar con el avance de las mismas, para eso uno también tiene que evolucionar, aprendiendo y actualizandose en dichas habilidades, ya que es preciso para poder alcanzar nuevas metas no tan solo a nivel personal sino también profesional.",
+    "redes":[
+        {
+            "id":1,
+            "icono":"fa-brands fa-codepen fa-xl text-white",
+            "nombre":"Codepen",
+            "url":"https://codepen.io/richarddf"
+        },
+        {
+            "id":2,
+            "icono":"fa-brands fa-github fa-xl text-white",
+            "nombre":"GtiHub",
+            "url":"https://github.com/richarddf"
+        },
+        {
+            "id":3,
+            "icono":"fa-brands fa-twitter fa-xl text-white",
+            "nombre":"Twitter",
+            "url":"https://twitter.com/rich_df"
+        },
+        {
+            "id":4,
+            "icono":"fa-brands fa-linkedin fa-xl text-white",
+            "nombre":"Linkedin",
+            "url":"https://www.linkedin.com/in/richard-diaz-flores-62b02b1a/"
+        }
+    ],
     "experiencias":[
         {
             "id":1,
