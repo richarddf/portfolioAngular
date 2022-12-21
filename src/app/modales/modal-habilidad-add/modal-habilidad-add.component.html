@@ -28,9 +28,9 @@
                             El camino de la imágen de la Tecnología es requerido.
                         </p>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-12">
                         <label for="inputPorcentaje" class="form-label">Porcentaje</label>
-                        <input type="number" formControlName="porcentaje" lass="form-control" id="inputPorcentaje" placeholder="Ingrese un valor menor a 100" min="0" max="100" required>
+                        <input type="number" formControlName="porcentaje" class="form-control" id="inputPorcentaje" placeholder="Ingrese un valor menor a 100" min="0" max="100" required>
                     </div>
                     <div *ngIf="Porcentaje?.errors && Porcentaje?.touched">    
                         <p *ngIf="Porcentaje?.hasError('required')" class="error">
@@ -43,7 +43,7 @@
                             El porcentaje debe estar entre 0 y 100
                         </p>
                     </div>
-                    <div class="col-md-9">
+                    <div class="col-md-12">
                         <label for="inputDescripcionNivel" class="form-label">Descripción del Nivel</label>
                         <input type="text" formControlName="descripcion" class="form-control" id="inputDescripcionNivel" placeholder="Principiante, Intermedio, Avanzado, etc." required>
                     </div>

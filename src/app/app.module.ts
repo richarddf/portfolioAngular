@@ -62,4 +62,4 @@ import { RedesComponent } from './componentes/redes/redes.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
