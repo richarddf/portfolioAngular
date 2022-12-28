@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Persona } from 'src/app/entidades/persona';
+// import { PersonaService } from 'src/app/servicios/persona.service';
 import { DatosService } from 'src/app/servicios/datos.service';
 
 @Component({
@@ -11,7 +13,11 @@ export class AcercadeComponent implements OnInit {
   titulo : string = '';
   imgPerfil : string = '';
   descripcion : string = '';
+
+  // personas: Persona[]=[];
+  
   constructor(private datos:DatosService) { }
+  // constructor(private persoService : PersonaService) { }
 
   ngOnInit(): void {
     this.datos.getDatos().subscribe(data => {
@@ -20,6 +26,11 @@ export class AcercadeComponent implements OnInit {
       this.imgPerfil = data.imagenPerfil;
       this.descripcion = data.descripcion;
     })
+    // this.listaExperiencias();
   }
+
+  // listaExperiencias() : void{
+  //   this.persoService.getPersonas().subscribe(data => {this.personas=data});
+  // }
 
 }

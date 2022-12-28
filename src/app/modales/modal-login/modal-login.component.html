@@ -9,7 +9,7 @@
             <div class="modal-body p-5 pt-0">
                 <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
                     <div class="form-floating mb-3">
-                        <input type="email" formControlName="email" class="form-control rounded-3" id="floatingInput" placeholder="name@example.com">
+                        <input type="email" formControlName="email" class="form-control rounded-3" [ngClass]="{'is-invalid': Mail?.errors && Mail?.touched, 'is-valid': !Mail?.errors && Mail?.touched}" id="floatingInput" placeholder="name@example.com">
                         <label for="floatingInput">Email</label>
                     </div>
                     <!-- Gracias al getter que configuramos en el controlador -->
@@ -23,7 +23,7 @@
                     </div>
 
                     <div class="form-floating mb-3">
-                        <input type="password" formControlName="password" class="form-control rounded-3" id="floatingPassword" placeholder="Password">
+                        <input type="password" formControlName="password" class="form-control rounded-3" [ngClass]="{'is-invalid': Password?.errors && Password?.touched, 'is-valid': !Password?.errors && Password?.touched}"id="floatingPassword" placeholder="Password">
                         <label for="floatingPassword">Contraseña</label>
                     </div>
                     <!-- Gracias al getter que configuramos en el controlador -->
