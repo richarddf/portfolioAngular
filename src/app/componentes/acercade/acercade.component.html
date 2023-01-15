@@ -3,13 +3,14 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-                <img [src]="imgPerfil" alt="Foto Perfil" class="circulo img-fluid">
+                <img [src]="persona.imagen_perfil" alt="Foto Perfil" class="circulo img-fluid">
+                <!-- <img src="../assets/img/fotoPerfil.jpg" alt="Foto Perfil" class="circulo img-fluid"> -->
             </div>
             <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9 mt-3 pt-2">
-                <h4>{{nombre}}</h4>
-                <h5 class="center">{{titulo}}</h5>
+                <h4>{{persona.nombre}}</h4>
+                <h5 class="center">{{persona.titulo}}</h5>
                 <hr>
-                <span class="borde">{{descripcion}}
+                <span class="borde">{{persona.descripcion}}
                 </span>
             </div>
             <div class="col-xs-12 col-sm-1 col-md-1 col-lg-1 mt-4 pt-2 pt-2">

@@ -9,8 +9,8 @@
             <div class="modal-body p-5 pt-0">
                 <form [formGroup]="form" (ngSubmit)="onEnviar($event)" class="row g-3">
                     <div class="col-12">
-                        <label for="inputInstitucion" class="form-label">Institución</label>
-                        <input type="text" formControlName="institucion" class="form-control" id="inputInstitucion" placeholder="Nombre de la institución" required>
+                        <label for="inputInstitucionExpAdd" class="form-label">Institución</label>
+                        <input type="text" formControlName="institucion" class="form-control" id="inputInstitucionExpAdd" placeholder="Nombre de la institución" required>
                     </div>
                     <!-- Gracias al getter que configuramos en el controlador -->
                     <div *ngIf="Institucion?.errors && Institucion?.touched">    
@@ -19,8 +19,8 @@
                         </p>
                     </div>
                     <div class="col-12">
-                        <label for="inputAddress" class="form-label">Dirección</label>
-                        <input type="text" formControlName="direccion" class="form-control" id="inputAddress" placeholder="Calle, Avda ..." required>
+                        <label for="inputAddressExpAdd" class="form-label">Dirección</label>
+                        <input type="text" formControlName="direccion" class="form-control" id="inputAddressExpAdd" placeholder="Calle, Avda ..." required>
                     </div>
                     <!-- Gracias al getter que configuramos en el controlador -->
                     <div *ngIf="Direccion?.errors && Direccion?.touched">    
@@ -29,8 +29,8 @@
                         </p>
                     </div>
                     <div class="col-md-12">
-                        <label for="inputPosicion" class="form-label">Posición</label>
-                        <input type="text" formControlName="posicion" class="form-control" id="inputPosicion" placeholder="Encargado, administrativo" required>
+                        <label for="inputPosicionExpAdd" class="form-label">Posición</label>
+                        <input type="text" formControlName="posicion" class="form-control" id="inputPosicionExpAdd" placeholder="Encargado, administrativo" required>
                     </div>
                     <!-- Gracias al getter que configuramos en el controlador -->
                     <div *ngIf="Posicion?.errors && Posicion?.touched">    
@@ -39,8 +39,8 @@
                         </p>
                     </div>
                     <div class="col-4">
-                        <label for="inputPeriodo" class="form-label">Fecha Inicio</label>
-                        <input type="date" formControlName="fechaInicio" class="form-control" id="inputFecInicio" placeholder="dd/mm/aaaa" required>
+                        <label for="inputFecInicioExpAdd" class="form-label">Fecha Inicio</label>
+                        <input type="date" formControlName="fechaInicio" class="form-control" id="inputFecInicioExpAdd" placeholder="dd/mm/aaaa" required>
                     </div>
                     <!-- Gracias al getter que configuramos en el controlador -->
                     <div *ngIf="FechaInicio?.errors && FechaInicio?.touched">    
@@ -49,8 +49,8 @@
                         </p>
                     </div>
                     <div class="col-4">
-                        <label for="inputPeriodo" class="form-label">Fecha Final</label>
-                        <input type="date" formControlName="fechaFin" class="form-control" id="inputFecFinal" placeholder="dd/mm/aaaa" required>
+                        <label for="inputFecFinalExpAdd" class="form-label">Fecha Final</label>
+                        <input type="date" formControlName="fechaFin" class="form-control" id="inputFecFinalExpAdd" placeholder="dd/mm/aaaa" required>
                     </div>
                     <!-- Gracias al getter que configuramos en el controlador -->
                     <div *ngIf="FechaFin?.errors && FechaFin?.touched">    

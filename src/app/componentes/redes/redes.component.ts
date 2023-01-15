@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { DatosService } from 'src/app/servicios/datos.service';
+import { Red } from 'src/app/entidades/red';
+import { RedService } from 'src/app/servicios/red.service';
 
 @Component({
   selector: 'app-redes',
@@ -8,13 +9,14 @@ import { DatosService } from 'src/app/servicios/datos.service';
 })
 export class RedesComponent implements OnInit {
   // Traer un array
-  redes : any = [];
 
-  constructor(private datos:DatosService) { }
+  redes : Red[]=[];
+
+  constructor(private datos:RedService) { }
 
   ngOnInit(): void {
-    this.datos.getDatos().subscribe(data => {
-      this.redes = data.redes;
+    this.datos.getRedes().subscribe(data => {
+      this.redes = data;
     })
   }
 

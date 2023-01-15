@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { DatosService } from 'src/app/servicios/datos.service';
+import { Habilidad } from 'src/app/entidades/habilidad';
+import { HabilidadService } from 'src/app/servicios/habilidad.service';
 
 @Component({
   selector: 'app-habilidades',
@@ -8,14 +9,16 @@ import { DatosService } from 'src/app/servicios/datos.service';
 })
 export class HabilidadesComponent implements OnInit {
  // Traer un array
-  habilidades : any = [];
+
+  habilidades : Habilidad[] = [];
+
   alternativo : string = 'Logo ';
 
-  constructor(private datos:DatosService) { }
+  constructor(private datos:HabilidadService) { }
 
   ngOnInit(): void {
-    this.datos.getDatos().subscribe(data => {
-      this.habilidades = data.habilidades;
+    this.datos.getHabilidades().subscribe(data => {
+      this.habilidades = data;
     })
   }
 

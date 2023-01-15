@@ -9,8 +9,8 @@
             <div class="modal-body p-5 pt-0">
                 <form [formGroup]="form" (ngSubmit)="onEnviar($event)" class="row g-3">
                     <div class="col-12">
-                        <label for="inputInstitucion" class="form-label">Institución</label>
-                        <input type="text" formControlName="institucion" class="form-control" id="inputInstitucion" placeholder="Nombre de la institución" required>
+                        <label for="inputInstitucionEduAdd" class="form-label">Institución</label>
+                        <input type="text" formControlName="institucion" class="form-control" id="inputInstitucionEduAdd" placeholder="Nombre de la institución" required>
                     </div>
                     <!-- Gracias al getter que configuramos en el controlador -->
                     <div *ngIf="Institucion?.errors && Institucion?.touched">    
@@ -19,8 +19,8 @@
                         </p>
                     </div>
                     <div class="col-12">
-                        <label for="inputAddress" class="form-label">Dirección</label>
-                        <input type="text" formControlName="direccion" class="form-control" id="inputAddress" placeholder="Calle, Avda ..." required>
+                        <label for="inputAddressEduAdd" class="form-label">Dirección</label>
+                        <input type="text" formControlName="direccion" class="form-control" id="inputAddressEduAdd" placeholder="Calle, Avda ..." required>
                     </div>
                     <!-- Gracias al getter que configuramos en el controlador -->
                     <div *ngIf="Direccion?.errors && Direccion?.touched">    
@@ -29,8 +29,8 @@
                         </p>
                     </div>
                     <div class="col-12">
-                        <label for="inputPosicion" class="form-label">Título</label>
-                        <input type="text" formControlName="titulo" class="form-control" id="inputPosicion" placeholder="Ingeniero, Contador, Profesor" required>
+                        <label for="inputPosicionEduAdd" class="form-label">Título</label>
+                        <input type="text" formControlName="titulo" class="form-control" id="inputPosicionEduAdd" placeholder="Ingeniero, Contador, Profesor" required>
                     </div>
                     <!-- Gracias al getter que configuramos en el controlador -->
                     <div *ngIf="Titulo?.errors && Titulo?.touched">    
@@ -39,8 +39,8 @@
                         </p>
                     </div>
                     <div class="col-4">
-                        <label for="inputPeriodo" class="form-label">Fecha Inicio</label>
-                        <input type="date" formControlName="fechaInicio" class="form-control" id="inputFecInicio" placeholder="dd/mm/aaaa" required>
+                        <label for="inputFecInicioEduAdd" class="form-label">Fecha Inicio</label>
+                        <input type="date" formControlName="fechaInicio" class="form-control" id="inputFecInicioEduAdd" placeholder="dd/mm/aaaa" required>
                     </div>
                     <!-- Gracias al getter que configuramos en el controlador -->
                     <div *ngIf="FechaInicio?.errors && FechaInicio?.touched">    
@@ -49,8 +49,8 @@
                         </p>
                     </div>
                     <div class="col-4">
-                        <label for="inputPeriodo" class="form-label">Fecha Final</label>
-                        <input type="date" formControlName="fechaFin" class="form-control" id="inputFecFinal" placeholder="dd/mm/aaaa" required>
+                        <label for="inputFecFinalEduAdd" class="form-label">Fecha Final</label>
+                        <input type="date" formControlName="fechaFin" class="form-control" id="inputFecFinalEduAdd" placeholder="dd/mm/aaaa" required>
                     </div>
                     <!-- Gracias al getter que configuramos en el controlador -->
                     <div *ngIf="FechaFin?.errors && FechaFin?.touched">    

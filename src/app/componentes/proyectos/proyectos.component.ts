@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { DatosService } from 'src/app/servicios/datos.service';
+import { Proyecto } from 'src/app/entidades/proyecto';
+import { ProyectoService } from 'src/app/servicios/proyecto.service';
 
 @Component({
   selector: 'app-proyectos',
@@ -8,12 +9,13 @@ import { DatosService } from 'src/app/servicios/datos.service';
 })
 export class ProyectosComponent implements OnInit {
 // Traer un array
-  proyectos : any = [];
-  constructor(private datos:DatosService) { }
+  proyectos : Proyecto[] = [];
+
+  constructor(private datos:ProyectoService) { }
 
   ngOnInit(): void {
-    this.datos.getDatos().subscribe(data => {
-      this.proyectos = data.proyectos;
+    this.datos.getProyectos().subscribe(data => {
+      this.proyectos = data;
     })
   }
 

@@ -9,8 +9,8 @@
             <div class="modal-body p-5 pt-0">
                 <form [formGroup]="form" (ngSubmit)="onEnviar($event)" class="row g-3">
                     <div class="col-12">
-                        <label for="inputTecnologia" class="form-label">Tecnología</label>
-                        <input type="text" formControlName="tecnologia" class="form-control" id="inputTecnologia" placeholder="Nombre de Tecnología" required>
+                        <label for="inputTecnologiaHab" class="form-label">Tecnología</label>
+                        <input type="text" formControlName="tecnologia" class="form-control" id="inputTecnologiaHab" placeholder="Nombre de Tecnología" required>
                     </div>
                     <!-- Gracias al getter que configuramos en el controlador -->
                     <div *ngIf="Tecnologia?.errors && Tecnologia?.touched">    
@@ -19,8 +19,8 @@
                         </p>
                     </div>
                     <div class="col-12">
-                        <label for="inputUrl" class="form-label">URL Imágen</label>
-                        <input type="url" formControlName="urlImgTec" class="form-control" id="inputUrl" placeholder="http://..." required>
+                        <label for="inputUrlHab" class="form-label">URL Imágen</label>
+                        <input type="url" formControlName="urlImgTec" class="form-control" id="inputUrlHab" placeholder="http://..." required>
                     </div>
                     <!-- Gracias al getter que configuramos en el controlador -->
                     <div *ngIf="UrlImgTecnologia?.errors && UrlImgTecnologia?.touched">    
@@ -29,8 +29,8 @@
                         </p>
                     </div>
                     <div class="col-md-12">
-                        <label for="inputPorcentaje" class="form-label">Porcentaje</label>
-                        <input type="number" formControlName="porcentaje" class="form-control" id="inputPorcentaje" placeholder="Ingrese un valor menor a 100" min="0" max="100" required>
+                        <label for="inputPorcentajeHab" class="form-label">Porcentaje</label>
+                        <input type="number" formControlName="porcentaje" class="form-control" id="inputPorcentajeHab" placeholder="Ingrese un valor menor a 100" min="0" max="100" required>
                     </div>
                     <div *ngIf="Porcentaje?.errors && Porcentaje?.touched">    
                         <p *ngIf="Porcentaje?.hasError('required')" class="error">
@@ -44,8 +44,8 @@
                         </p>
                     </div>
                     <div class="col-md-12">
-                        <label for="inputDescripcionNivel" class="form-label">Descripción del Nivel</label>
-                        <input type="text" formControlName="descripcion" class="form-control" id="inputDescripcionNivel" placeholder="Principiante, Intermedio, Avanzado, etc." required>
+                        <label for="inputDescripcionNivelHab" class="form-label">Descripción del Nivel</label>
+                        <input type="text" formControlName="descripcion" class="form-control" id="inputDescripcionNivelHab" placeholder="Principiante, Intermedio, Avanzado, etc." required>
                     </div>
                     <!-- Gracias al getter que configuramos en el controlador -->
                     <div *ngIf="Descripcion?.errors && Descripcion?.touched">    
