@@ -1,3 +1,4 @@
+import { formatDate } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
@@ -9,6 +10,16 @@ import { Estudio } from '../entidades/estudio';
 export class EstudioService {
 
   url = "http://localhost:8080/estudio/"
+
+  estuMod: Estudio = {
+    id: null ?? 0,
+    institucion: '',
+    direccion: '',
+    titulo: '',
+    fecha_inicio: '',
+    fecha_fin: '',
+    idpersona: 1    
+  }
 
   constructor(private httpClient: HttpClient) {  }
 

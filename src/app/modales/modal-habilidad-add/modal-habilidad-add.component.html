@@ -20,7 +20,7 @@
                     </div>
                     <div class="col-12">
                         <label for="inputUrlHabAdd" class="form-label">URL Imágen</label>
-                        <input type="url" formControlName="urlImgTec" class="form-control" id="inputUrlHabAdd" placeholder="http://..." required>
+                        <input type="url" formControlName="url_img_tecnologia" class="form-control" id="inputUrlHabAdd" placeholder="http://..." required>
                     </div>
                     <!-- Gracias al getter que configuramos en el controlador -->
                     <div *ngIf="UrlImgTecnologia?.errors && UrlImgTecnologia?.touched">    
@@ -54,7 +54,7 @@
                         </p>
                     </div>
                     <div class="col-md-12 d-grid gap-2 d-md-flex justify-content-md-end">
-                        <button type="submit" class="btn btn-md rounded-3 btn-outline-success">Grabar</button>
+                        <button type="submit" class="btn btn-md rounded-3 btn-outline-success" data-bs-dismiss="modal">Grabar</button>
                     </div>
                 </form>
             </div>

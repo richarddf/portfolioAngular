@@ -17,7 +17,6 @@ export class ModalLoginComponent implements OnInit {
   perso: Persona = new Persona("","","","","","");
 
   // Inyectar en el constructor el formBuilder
-  //constructor(private formBuilder: FormBuilder, private ruta: Router) {
   constructor(private formBuilder: FormBuilder, private ruta: Router, private autoService: AutenticacionService) {
     // Creamos el grupo de controles para el formulario de login
     this.form = this.formBuilder.group({
@@ -52,9 +51,10 @@ export class ModalLoginComponent implements OnInit {
     if (this.form.valid){
       // Llamamos a nuestro servicio para enviar los datos al servidor
       // También podríamos ejecutar alguna lógica extra
-      alert("Todo salio bien ¡Enviar formulario!");
+      //alert("Todo salio bien ¡Enviar formulario!");
       this.autoService.loginPersona(this.form.value).subscribe(data => {
         console.log("User: " + JSON.stringify(data));
+        console.log(data);
       });
       window.location.reload();
 

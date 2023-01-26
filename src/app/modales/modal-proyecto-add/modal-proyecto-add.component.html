@@ -10,7 +10,7 @@
                 <form [formGroup]="form" (ngSubmit)="onEnviar($event)" class="row g-3">
                     <div class="col-12">
                         <label for="inputUrlProyAdd" class="form-label">URL Imagen</label>
-                        <input type="url" formControlName="urlImgProyecto" class="form-control" id="inputUrlProyAdd" placeholder="http://..." required>
+                        <input type="url" formControlName="url_img_proyecto" class="form-control" id="inputUrlProyAdd" placeholder="http://..." required>
                     </div>
                     <!-- Gracias al getter que configuramos en el controlador -->
                     <div *ngIf="UrlImgProyecto?.errors && UrlImgProyecto?.touched">    

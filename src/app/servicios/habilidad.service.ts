@@ -10,6 +10,15 @@ export class HabilidadService {
 
   url = "http://localhost:8080/habilidad/"
 
+  habilMod: Habilidad = {
+    id: null ?? 0,
+    tecnologia: '',
+    url_img_tecnologia: '',
+    porcentaje: 0,
+    descripcion: '',
+    idpersona: 1   
+  }
+
   constructor(private httpClient: HttpClient) { }
 
   public getHabilidades(): Observable<Habilidad[]>{

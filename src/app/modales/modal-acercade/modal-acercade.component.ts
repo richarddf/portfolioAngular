@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { PersonaService } from 'src/app/servicios/persona.service';
 
 @Component({
   selector: 'app-modal-acercade',
@@ -11,7 +12,7 @@ export class ModalAcercadeComponent implements OnInit {
   form: FormGroup;
 
   // Inyectar en el constructor el formBuilder
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder, public persoService: PersonaService) {
     // Creamos el grupo de controles para el formulario de login
     this.form = this.formBuilder.group({
       nombreYApellido : ['',[Validators.required]],
@@ -63,10 +64,22 @@ export class ModalAcercadeComponent implements OnInit {
     if (this.form.valid){
       // Llamamos a nuestro servicio para enviar los datos al servidor
       // También podríamos ejecutar alguna lógica extra
-      alert("Todo salio bien ¡Enviar formulario!")
+      try {
+        this.persoService.actualizarPersona(this.persoService.persoMod).subscribe(data => {
+          this.persoService.persoMod = data;
+          console.log(data);
+          
+        });
+        alert("Datos modificados exitosamente");
+        window.location.reload();
+      } catch (error) {
+          alert(error);
+      }
+      
     }else{
       // Corremos todas las validaciones para que se ejecuten los mensajes de error en el template     
       this.form.markAllAsTouched(); 
     }
   }
+
 }

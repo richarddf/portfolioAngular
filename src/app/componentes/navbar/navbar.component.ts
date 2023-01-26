@@ -7,11 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  logueado: boolean = false;
+  modoEdicion: boolean = false;
   
   constructor() { }
 
   ngOnInit(): void {
+    if (sessionStorage.getItem('currentUser') !== null && sessionStorage.getItem('currentUser') !== "null") {
+      this.modoEdicion = true;        
+     } 
   }
 
+  CerrarSesion(){
+    sessionStorage.setItem('currentUser', 'null');
+    this.modoEdicion = false; 
+    window.location.reload();
+  }
 }

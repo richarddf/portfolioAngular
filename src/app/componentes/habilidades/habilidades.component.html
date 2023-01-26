@@ -6,7 +6,7 @@
                 <h4 class="pt-2 pb-2">Habilidades</h4>
             </div>
             <div class="col-xs-12 col-sm-1 col-md-1 col-lg-1 pt-2">
-                <button type="button" class="btn text-white colorBotonAlta" data-bs-toggle="modal" data-bs-target="#modalHabilidadAdd">
+                <button type="button" class="btn text-white colorBotonAlta" data-bs-toggle="modal" data-bs-target="#modalHabilidadAdd" *ngIf="modoEdicion">
                     <i class="fa-solid fa-circle-plus fa-xl"></i>
                 </button>
             </div>
@@ -17,10 +17,10 @@
         <div class="row">
             <div class="col-4 cuadro mx-auto shadow text-center" *ngFor="let habilidad of habilidades">
                 <!-- Button trigger modal - Boton para abrir formulario Habilidades -->
-                <button type="button" class="btn colorBoton" data-bs-toggle="modal" data-bs-target="#modalHabilidad">
+                <button type="button" class="btn colorBoton" data-bs-toggle="modal" data-bs-target="#modalHabilidad" *ngIf="modoEdicion" (click)="traerHabilidad(habilidad.id ?? 0)">
                     <i class="fa-solid fa-pen-to-square fa-lg"></i>
                 </button>
-                <button type="button" class="btn colorBoton">
+                <button type="button" class="btn colorBoton" *ngIf="modoEdicion" (click)="borrarHabilidad(habilidad.id ?? 0)">
                     <i class="fa-solid fa-trash fa-lg"></i>
                 </button>
                 <br>

@@ -10,6 +10,16 @@ export class ExperienciaService {
 
   url = "http://localhost:8080/experiencia/"
 
+  experMod: Experiencia = {
+    id: null ?? 0,
+    institucion: '',
+    direccion: '',
+    posicion: '',
+    fecha_inicio: '',
+    fecha_fin: '',
+    idpersona: 1    
+  }
+
   constructor(private httpClient: HttpClient) { }
 
   public getExperiencias(): Observable<Experiencia[]>{

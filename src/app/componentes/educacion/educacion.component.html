@@ -6,7 +6,7 @@
                 <h4 class="pt-2 pb-2">Educación</h4>
             </div>
             <div class="col-xs-12 col-sm-1 col-md-1 col-lg-1 pt-2">
-                <button type="button" class="btn text-white colorBotonAlta" data-bs-toggle="modal" data-bs-target="#modalEducacionAdd">
+                <button type="button" class="btn text-white colorBotonAlta" data-bs-toggle="modal" data-bs-target="#modalEducacionAdd" *ngIf="modoEdicion">
                     <i class="fa-solid fa-circle-plus fa-xl"></i>
                 </button>
             </div>
@@ -16,7 +16,7 @@
     <div class="container mt-3">
         <div class="row" *ngFor="let estudio of estudios">
             <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 pt-2">
-                <p>Desde <strong>{{estudio.fecha_inicio}}</strong> hasta <strong>{{estudio.fecha_fin}}</strong></p>
+                <p>Desde <strong>{{estudio.fecha_inicio | date:"dd/MM/yyyy"}}</strong> hasta <strong>{{estudio.fecha_fin  | date:"dd/MM/yyyy"}}</strong></p>
             </div>
             <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 pt-2">
                 <h5 class="colorOrg">{{estudio.institucion}}</h5>
@@ -25,10 +25,10 @@
             </div>
             <div class="col-xs-12 col-sm-1 col-md-1 col-lg-1 pt-2">
                 <!-- Button trigger modal - Boton para abrir formulario Educacion -->
-                <button type="button" class="btn colorBoton" data-bs-toggle="modal" data-bs-target="#modalEducacion">
+                <button type="button" class="btn colorBoton" data-bs-toggle="modal" data-bs-target="#modalEducacion" *ngIf="modoEdicion" (click)="traerEstudio(estudio.id ?? 0)">
                     <i class="fa-solid fa-pen-to-square fa-xl"></i>
                 </button>
-                <button type="button" class="btn colorBoton">
+                <button type="button" class="btn colorBoton" *ngIf="modoEdicion" (click)="borrarEstudio(estudio.id ?? 0)">
                     <i class="fa-solid fa-trash fa-xl"></i>
                 </button>
             </div>

@@ -10,7 +10,7 @@
                 <form [formGroup]="form" (ngSubmit)="onEnviar($event)" class="row g-3">
                     <div class="col-12">
                         <label for="inputInstitucionExp" class="form-label">Institución</label>
-                        <input type="text" formControlName="institucion" class="form-control" id="inputInstitucionExp" placeholder="Nombre de la institución" required>
+                        <input type="text" formControlName="institucion" class="form-control" id="inputInstitucionExp" placeholder="Nombre de la institución" [(ngModel)]="experService.experMod.institucion">
                     </div>
                     <!-- Gracias al getter que configuramos en el controlador -->
                     <div *ngIf="Institucion?.errors && Institucion?.touched">    
@@ -20,7 +20,7 @@
                     </div>
                     <div class="col-12">
                         <label for="inputAddressExp" class="form-label">Dirección</label>
-                        <input type="text" formControlName="direccion" class="form-control" id="inputAddressExp" placeholder="Calle, Avda ..." required>
+                        <input type="text" formControlName="direccion" class="form-control" id="inputAddressExp" placeholder="Calle, Avda ..." [(ngModel)]="experService.experMod.direccion">
                     </div>
                     <!-- Gracias al getter que configuramos en el controlador -->
                     <div *ngIf="Direccion?.errors && Direccion?.touched">    
@@ -30,7 +30,7 @@
                     </div>
                     <div class="col-md-12">
                         <label for="inputPosicionExp" class="form-label">Posición</label>
-                        <input type="text" formControlName="posicion" class="form-control" id="inputPosicionExp" placeholder="Encargado, administrativo" required>
+                        <input type="text" formControlName="posicion" class="form-control" id="inputPosicionExp" placeholder="Encargado, administrativo" [(ngModel)]="experService.experMod.posicion">
                     </div>
                     <!-- Gracias al getter que configuramos en el controlador -->
                     <div *ngIf="Posicion?.errors && Posicion?.touched">    
@@ -40,7 +40,7 @@
                     </div>
                     <div class="col-4">
                         <label for="inputFecInicioExp" class="form-label">Fecha Inicio</label>
-                        <input type="date" formControlName="fechaInicio" class="form-control" id="inputFecInicioExp" placeholder="dd/mm/aaaa" required>
+                        <input type="date" formControlName="fechaInicio" class="form-control" id="inputFecInicioExp" placeholder="dd/mm/aaaa" [(ngModel)]="experService.experMod.fecha_inicio" required>
                     </div>
                     <!-- Gracias al getter que configuramos en el controlador -->
                     <div *ngIf="FechaInicio?.errors && FechaInicio?.touched">    
@@ -50,7 +50,7 @@
                     </div>
                     <div class="col-4">
                         <label for="inputFecFinalExp" class="form-label">Fecha Final</label>
-                        <input type="date" formControlName="fechaFin" class="form-control" id="inputFecFinalExp" placeholder="dd/mm/aaaa" required>
+                        <input type="date" formControlName="fechaFin" class="form-control" id="inputFecFinalExp" placeholder="dd/mm/aaaa" [(ngModel)]="experService.experMod.fecha_fin" required>
                     </div>
                     <!-- Gracias al getter que configuramos en el controlador -->
                     <div *ngIf="FechaFin?.errors && FechaFin?.touched">    
@@ -59,7 +59,7 @@
                         </p>
                     </div>
                     <div class="col-md-12 d-grid gap-2 d-md-flex justify-content-md-end">
-                        <button type="submit" class="btn btn-md rounded-3 btn-outline-success">Grabar</button>
+                        <button type="submit" class="btn btn-md rounded-3 btn-outline-success" data-bs-dismiss="modal">Grabar</button>
                     </div>
                 </form>
             </div>

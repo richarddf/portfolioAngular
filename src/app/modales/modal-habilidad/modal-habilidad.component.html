@@ -10,7 +10,7 @@
                 <form [formGroup]="form" (ngSubmit)="onEnviar($event)" class="row g-3">
                     <div class="col-12">
                         <label for="inputTecnologiaHab" class="form-label">Tecnología</label>
-                        <input type="text" formControlName="tecnologia" class="form-control" id="inputTecnologiaHab" placeholder="Nombre de Tecnología" required>
+                        <input type="text" formControlName="tecnologia" class="form-control" id="inputTecnologiaHab" placeholder="Nombre de Tecnología" [(ngModel)]="habilService.habilMod.tecnologia">
                     </div>
                     <!-- Gracias al getter que configuramos en el controlador -->
                     <div *ngIf="Tecnologia?.errors && Tecnologia?.touched">    
@@ -20,7 +20,7 @@
                     </div>
                     <div class="col-12">
                         <label for="inputUrlHab" class="form-label">URL Imágen</label>
-                        <input type="url" formControlName="urlImgTec" class="form-control" id="inputUrlHab" placeholder="http://..." required>
+                        <input type="url" formControlName="url_img_tecnologia" class="form-control" id="inputUrlHab" placeholder="http://..." [(ngModel)]="habilService.habilMod.url_img_tecnologia">
                     </div>
                     <!-- Gracias al getter que configuramos en el controlador -->
                     <div *ngIf="UrlImgTecnologia?.errors && UrlImgTecnologia?.touched">    
@@ -30,7 +30,7 @@
                     </div>
                     <div class="col-md-12">
                         <label for="inputPorcentajeHab" class="form-label">Porcentaje</label>
-                        <input type="number" formControlName="porcentaje" class="form-control" id="inputPorcentajeHab" placeholder="Ingrese un valor menor a 100" min="0" max="100" required>
+                        <input type="number" formControlName="porcentaje" class="form-control" id="inputPorcentajeHab" placeholder="Ingrese un valor menor a 100" min="0" max="100" [(ngModel)]="habilService.habilMod.porcentaje">
                     </div>
                     <div *ngIf="Porcentaje?.errors && Porcentaje?.touched">    
                         <p *ngIf="Porcentaje?.hasError('required')" class="error">
@@ -45,7 +45,7 @@
                     </div>
                     <div class="col-md-12">
                         <label for="inputDescripcionNivelHab" class="form-label">Descripción del Nivel</label>
-                        <input type="text" formControlName="descripcion" class="form-control" id="inputDescripcionNivelHab" placeholder="Principiante, Intermedio, Avanzado, etc." required>
+                        <input type="text" formControlName="descripcion" class="form-control" id="inputDescripcionNivelHab" placeholder="Principiante, Intermedio, Avanzado, etc." [(ngModel)]="habilService.habilMod.descripcion">
                     </div>
                     <!-- Gracias al getter que configuramos en el controlador -->
                     <div *ngIf="Descripcion?.errors && Descripcion?.touched">    
@@ -54,7 +54,7 @@
                         </p>
                     </div>
                     <div class="col-md-12 d-grid gap-2 d-md-flex justify-content-md-end">
-                        <button type="submit" class="btn btn-md rounded-3 btn-outline-success">Grabar</button>
+                        <button type="submit" class="btn btn-md rounded-3 btn-outline-success" data-bs-dismiss="modal">Grabar</button>
                     </div>
                 </form>
             </div>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ExperienciaService } from 'src/app/servicios/experiencia.service';
 
 @Component({
   selector: 'app-modal-experiencia',
@@ -10,7 +11,7 @@ export class ModalExperienciaComponent implements OnInit {
 
   form: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) { 
+  constructor(private formBuilder: FormBuilder, public experService: ExperienciaService) { 
     // Creamos el grupo de controles para el formulario de login
     this.form = this.formBuilder.group({
       institucion : ['',[Validators.required]],
@@ -67,7 +68,17 @@ export class ModalExperienciaComponent implements OnInit {
     if (this.form.valid){
       // Llamamos a nuestro servicio para enviar los datos al servidor
       // También podríamos ejecutar alguna lógica extra
-      alert("Todo salio bien ¡Enviar formulario!")
+      try {
+        this.experService.actualizarExperiencia(this.experService.experMod).subscribe(data => {
+          this.experService.experMod = data;
+          console.log(data);
+        });
+        alert("Datos modificados exitosamente");
+        window.location.reload();
+      } catch (error) {
+          alert(error);
+      }
+
     }else{
       // Corremos todas las validaciones para que se ejecuten los mensajes de error en el template     
       this.form.markAllAsTouched(); 

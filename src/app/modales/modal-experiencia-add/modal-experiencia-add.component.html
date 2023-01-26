@@ -40,7 +40,7 @@
                     </div>
                     <div class="col-4">
                         <label for="inputFecInicioExpAdd" class="form-label">Fecha Inicio</label>
-                        <input type="date" formControlName="fechaInicio" class="form-control" id="inputFecInicioExpAdd" placeholder="dd/mm/aaaa" required>
+                        <input type="date" formControlName="fecha_inicio" class="form-control" id="inputFecInicioExpAdd" placeholder="dd/mm/aaaa" required>
                     </div>
                     <!-- Gracias al getter que configuramos en el controlador -->
                     <div *ngIf="FechaInicio?.errors && FechaInicio?.touched">    
@@ -50,7 +50,7 @@
                     </div>
                     <div class="col-4">
                         <label for="inputFecFinalExpAdd" class="form-label">Fecha Final</label>
-                        <input type="date" formControlName="fechaFin" class="form-control" id="inputFecFinalExpAdd" placeholder="dd/mm/aaaa" required>
+                        <input type="date" formControlName="fecha_fin" class="form-control" id="inputFecFinalExpAdd" placeholder="dd/mm/aaaa" required>
                     </div>
                     <!-- Gracias al getter que configuramos en el controlador -->
                     <div *ngIf="FechaFin?.errors && FechaFin?.touched">    
@@ -59,7 +59,7 @@
                         </p>
                     </div>
                     <div class="col-md-12 d-grid gap-2 d-md-flex justify-content-md-end">
-                        <button type="submit" class="btn btn-md rounded-3 btn-outline-success">Grabar</button>
+                        <button type="submit" class="btn btn-md rounded-3 btn-outline-success" data-bs-dismiss="modal">Grabar</button>
                     </div>
                 </form>
             </div>

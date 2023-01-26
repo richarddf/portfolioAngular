@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { EstudioService } from 'src/app/servicios/estudio.service';
 
 @Component({
   selector: 'app-modal-educacion',
@@ -10,8 +11,8 @@ export class ModalEducacionComponent implements OnInit {
 
   form: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) { 
-    // Creamos el grupo de controles para el formulario de login
+  constructor(private formBuilder: FormBuilder, public educaService: EstudioService) { 
+    // Creamos el grupo de controles para el formulario
     this.form = this.formBuilder.group({
       institucion : ['',[Validators.required]],
       direccion : ['',[Validators.required]],
@@ -67,7 +68,17 @@ export class ModalEducacionComponent implements OnInit {
     if (this.form.valid){
       // Llamamos a nuestro servicio para enviar los datos al servidor
       // También podríamos ejecutar alguna lógica extra
-      alert("Todo salio bien ¡Enviar formulario!")
+      try {
+        this.educaService.actualizarEstudio(this.educaService.estuMod).subscribe(data => {
+          this.educaService.estuMod = data;
+          console.log(data);
+        });
+        alert("Datos modificados exitosamente");
+        window.location.reload();
+      } catch (error) {
+          alert(error);
+      }
+
     }else{
       // Corremos todas las validaciones para que se ejecuten los mensajes de error en el template     
       this.form.markAllAsTouched(); 

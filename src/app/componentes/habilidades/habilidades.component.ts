@@ -11,6 +11,7 @@ export class HabilidadesComponent implements OnInit {
  // Traer un array
 
   habilidades : Habilidad[] = [];
+  modoEdicion: boolean = false;  
 
   alternativo : string = 'Logo ';
 
@@ -19,7 +20,23 @@ export class HabilidadesComponent implements OnInit {
   ngOnInit(): void {
     this.datos.getHabilidades().subscribe(data => {
       this.habilidades = data;
-    })
+    });
+    if (sessionStorage.getItem('currentUser') !== null && sessionStorage.getItem('currentUser') !== "null") {
+      this.modoEdicion = true;        
+    }
   }
 
+  traerHabilidad(id:number){
+    this.datos.verHabilidad(id).subscribe(data => {
+      this.datos.habilMod = data;
+    });
+  }
+
+  borrarHabilidad(id:number){
+    this.datos.borrarHabilidad(id).subscribe(data => {
+      this.datos.habilMod = data;
+    });
+    alert("Habilidad eliminada");
+    window.location.reload();
+  }
 }

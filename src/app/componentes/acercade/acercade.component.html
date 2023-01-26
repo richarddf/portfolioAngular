@@ -1,10 +1,9 @@
 <!-- Acerca de mi -->
 <section class="acercaDe mt-3 mb-3">
     <div class="container">
-        <div class="row">
+        <div *ngFor="let persona of personas" class="row">
             <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
                 <img [src]="persona.imagen_perfil" alt="Foto Perfil" class="circulo img-fluid">
-                <!-- <img src="../assets/img/fotoPerfil.jpg" alt="Foto Perfil" class="circulo img-fluid"> -->
             </div>
             <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9 mt-3 pt-2">
                 <h4>{{persona.nombre}}</h4>
@@ -15,12 +14,10 @@
             </div>
             <div class="col-xs-12 col-sm-1 col-md-1 col-lg-1 mt-4 pt-2 pt-2">
                 <!-- Button trigger modal - Boton para abrir formulario acercaDe -->
-                <button type="button" class="btn colorBoton" data-bs-toggle="modal" data-bs-target="#modalAcercaDe">
+                <button type="button" class="btn colorBoton" data-bs-toggle="modal" data-bs-target="#modalAcercaDe" *ngIf="modoEdicion" (click)="traerPersona(persona.id ?? 0)">
                     <i class="fa-solid fa-pen-to-square fa-xl"></i>
                 </button>
-                <!-- <button type="button" class="btn colorBoton">
-                    <i class="fa-solid fa-trash fa-xl"></i>
-                </button> -->
+
             </div>
         </div>
     </div>        

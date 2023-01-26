@@ -10,7 +10,7 @@
                 <form [formGroup]="form" (ngSubmit)="onEnviar($event)" class="row g-3">
                     <div class="col-12">
                         <label for="inputUrlProy" class="form-label">URL Imagen</label>
-                        <input type="url" formControlName="urlImgProyecto" class="form-control" id="inputUrlProy" placeholder="http://..." required>
+                        <input type="url" formControlName="url_img_proyecto" class="form-control" id="inputUrlProy" placeholder="http://..." [(ngModel)]="proyService.proyMod.url_img_proyecto">
                     </div>
                     <!-- Gracias al getter que configuramos en el controlador -->
                     <div *ngIf="UrlImgProyecto?.errors && UrlImgProyecto?.touched">    
@@ -21,7 +21,7 @@
                     <div class="col-12">
                         <label for="inputDescripcionProy" class="form-label">Descripción</label>
                         <!-- <input type="text" class="form-control" id="inputDescripcion" placeholder="Descripción" required> -->
-                        <textarea formControlName="descripcion" class="form-control" name="" id="inputDescripcionProy" cols="30" rows="5" placeholder="Descripción" required></textarea>
+                        <textarea formControlName="descripcion" class="form-control" name="" id="inputDescripcionProy" cols="30" rows="5" placeholder="Descripción" [(ngModel)]="proyService.proyMod.descripcion"></textarea>
                     </div>
                     <!-- Gracias al getter que configuramos en el controlador -->
                     <div *ngIf="Descripcion?.errors && Descripcion?.touched">    
@@ -30,7 +30,7 @@
                         </p>
                     </div>
                     <div class="col-md-12 d-grid gap-2 d-md-flex justify-content-md-end">
-                        <button type="submit" class="btn btn-md rounded-3 btn-outline-success">Grabar</button>
+                        <button type="submit" class="btn btn-md rounded-3 btn-outline-success" data-bs-dismiss="modal">Grabar</button>
                     </div>
                 </form>
             </div>

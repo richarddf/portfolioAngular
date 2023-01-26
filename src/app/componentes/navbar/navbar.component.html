@@ -14,14 +14,14 @@
             <app-redes class="navbar-nav me-auto mb-1 mb-lg-0"></app-redes>
             <li class="nav-item">
                 <!-- Button trigger modal - Boton para abrir login -->
-                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalLogin" *ngIf="!logueado">
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalLogin" *ngIf="!modoEdicion">
                     <i class="fa-solid fa-user-lock fa-xl text-white"></i>
                 </button>  
             </li>
             <li class="nav-item active">
                 <!-- Button trigger modal - Boton para cerrar sesión -->
-                <button type="button" class="btn">
-                    <i class="fa-solid fa-right-from-bracket fa-xl text-white" *ngIf="logueado"></i>
+                <button type="button" class="btn" (click)="CerrarSesion()">
+                    <i class="fa-solid fa-right-from-bracket fa-xl text-white" *ngIf="modoEdicion"></i>
                 </button>  
             </li>
         </ul>

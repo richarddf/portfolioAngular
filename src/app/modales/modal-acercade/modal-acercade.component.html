@@ -10,7 +10,7 @@
                 <form [formGroup]="form" (ngSubmit)="onEnviar($event)" class="row g-3">
                     <div class="col-12">
                         <label for="inpuNombreAD" class="form-label">Nombre y Apellido</label>
-                        <input type="text" formControlName="nombreYApellido" class="form-control" id="inputNombreAD" placeholder="Nombre y Apellido">
+                        <input type="text" formControlName="nombreYApellido" class="form-control" id="inputNombreAD" placeholder="Nombre y Apellido" [(ngModel)] = "persoService.persoMod.nombre">
                     </div>
                     <!-- Gracias al getter que configuramos en el controlador -->
                     <div *ngIf="NombreYApellido?.errors && NombreYApellido?.touched">    
@@ -20,7 +20,7 @@
                     </div>
                     <div class="col-md-12">
                         <label for="inputTituloAD" class="form-label">Titulo</label>
-                        <input type="text" formControlName="titulo"  class="form-control" id="inputTituloAD" placeholder="Desarrollador Front, Back, otros">
+                        <input type="text" formControlName="titulo"  class="form-control" id="inputTituloAD" placeholder="Desarrollador Front, Back, otros" [(ngModel)]="persoService.persoMod.titulo">
                     </div>
                     <!-- Gracias al getter que configuramos en el controlador -->
                     <div *ngIf="Titulo?.errors && Titulo?.touched">    
@@ -30,7 +30,7 @@
                     </div>
                     <div class="col-12">
                         <label for="inputUrlAD" class="form-label">URL</label>
-                        <input type="url" formControlName="urlImgPerfil"  class="form-control" id="inputUrlAD" placeholder="http://...">
+                        <input type="url" formControlName="urlImgPerfil"  class="form-control" id="inputUrlAD" placeholder="http://..." [(ngModel)]="persoService.persoMod.imagen_perfil">
                     </div>
                     <!-- Gracias al getter que configuramos en el controlador -->
                     <div *ngIf="UrlImgPerfil?.errors && UrlImgPerfil?.touched">    
@@ -41,7 +41,7 @@
                     <div class="col-12">
                         <label for="inputDescripcionAD" class="form-label">Descripción</label>
                         <!-- <input type="text" class="form-control" id="inputDescripcion" placeholder="Descripción" required> -->
-                        <textarea formControlName="descripcion" class="form-control" name="" id="inputDescripcionAD" cols="30" rows="5" placeholder="Descripción"></textarea>
+                        <textarea formControlName="descripcion" class="form-control" name="" id="inputDescripcionAD" cols="30" rows="5" placeholder="Descripción" [(ngModel)]="persoService.persoMod.descripcion"></textarea>
                     </div>
                     <!-- Gracias al getter que configuramos en el controlador -->
                     <div *ngIf="Descripcion?.errors && Descripcion?.touched">    
@@ -50,7 +50,7 @@
                         </p>
                     </div>
                     <div class="col-md-12 d-grid gap-2 d-md-flex justify-content-md-end">
-                        <button type="submit" class="btn btn-md rounded-3 btn-outline-success">Grabar</button>
+                        <button type="submit" class="btn btn-md rounded-3 btn-outline-success" data-bs-dismiss="modal">Grabar</button>
                     </div>
                 </form>
             </div>

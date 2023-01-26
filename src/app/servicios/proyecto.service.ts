@@ -10,6 +10,13 @@ export class ProyectoService {
 
   url = "http://localhost:8080/proyecto/"
 
+  proyMod: Proyecto = {
+    id: null ?? 0,
+    descripcion: '',
+    url_img_proyecto: '',
+    idpersona : 1
+  }
+
   constructor(private httpClient: HttpClient) { }
 
   public getProyectos(): Observable<Proyecto[]>{

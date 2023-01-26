@@ -8,7 +8,17 @@ import { Persona } from '../entidades/persona';
 })
 export class PersonaService {
 
-  url = "http://localhost:8080/persona/"
+  url = "http://localhost:8080/persona/";
+
+  persoMod: Persona = {
+    id: 0,
+    nombre: '',
+    titulo: '',
+    imagen_perfil: '',
+    descripcion: '',
+    email: '',
+    password: '',
+  }
 
   constructor(private httpClient: HttpClient) { }
 
@@ -20,15 +30,8 @@ export class PersonaService {
     return this.httpClient.get<Persona>(this.url + `ver/${id}`);
   }
 
-  public agregarPersona(perso: Persona): Observable<any> {
-    return this.httpClient.post<any>(this.url + `crear`, perso);
-  }
-
   public actualizarPersona(perso: Persona): Observable<any> {
     return this.httpClient.put<any>(this.url + `actualizar`, perso);
   }
 
-  public borrarPersona(id: number): Observable<any> {
-    return this.httpClient.delete<any>(this.url + `borrar/${id}`);
-  }
 }

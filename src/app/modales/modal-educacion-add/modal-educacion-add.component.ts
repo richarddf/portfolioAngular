@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { EstudioService } from 'src/app/servicios/estudio.service';
 
 @Component({
   selector: 'app-modal-educacion-add',
@@ -10,14 +11,14 @@ export class ModalEducacionAddComponent implements OnInit {
 
   form: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) { 
-    // Creamos el grupo de controles para el formulario de login
+  constructor(private formBuilder: FormBuilder, public educaService: EstudioService) { 
+    // Creamos el grupo de controles para el formulario
     this.form = this.formBuilder.group({
       institucion : ['',[Validators.required]],
       direccion : ['',[Validators.required]],
       titulo : ['',[Validators.required]],
-      fechaInicio : ['',[Validators.required]],
-      fechaFin : ['',[Validators.required]]
+      fecha_inicio : ['',[Validators.required]],
+      fecha_fin : ['',[Validators.required]]
     })
   }
 
@@ -37,11 +38,11 @@ export class ModalEducacionAddComponent implements OnInit {
   }
 
   get FechaInicio(){
-    return this.form.get("fechaInicio");
+    return this.form.get("fecha_inicio");
   }
 
   get FechaFin(){
-    return this.form.get("fechaFin");
+    return this.form.get("fecha_fin");
   }
 
   get InstitucionValid(){
@@ -67,7 +68,17 @@ export class ModalEducacionAddComponent implements OnInit {
     if (this.form.valid){
       // Llamamos a nuestro servicio para enviar los datos al servidor
       // También podríamos ejecutar alguna lógica extra
-      alert("Todo salio bien ¡Enviar formulario!")
+      try {
+        this.educaService.agregarEstudio(this.form.value).subscribe(data => {
+          this.educaService.estuMod = data;
+          console.log(data);
+        });
+        alert("Datos agregados exitosamente");
+        window.location.reload();
+      } catch (error) {
+          alert(error);
+      }
+
     }else{
       // Corremos todas las validaciones para que se ejecuten los mensajes de error en el template     
       this.form.markAllAsTouched(); 
