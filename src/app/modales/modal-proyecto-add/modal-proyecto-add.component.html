@@ -10,7 +10,7 @@
                 <form [formGroup]="form" (ngSubmit)="onEnviar($event)" class="row g-3">
                     <div class="col-12">
                         <label for="inputUrlProyAdd" class="form-label">URL Imagen</label>
-                        <input type="url" formControlName="url_img_proyecto" class="form-control" id="inputUrlProyAdd" placeholder="http://..." required>
+                        <input type="url" formControlName="url_img_proyecto" class="form-control" id="inputUrlProyAdd" placeholder="http://..." [ngClass]="{'is-invalid': UrlImgProyecto?.errors && UrlImgProyecto?.touched, 'is-valid': !UrlImgProyecto?.errors && UrlImgProyecto?.touched}">
                     </div>
                     <!-- Gracias al getter que configuramos en el controlador -->
                     <div *ngIf="UrlImgProyecto?.errors && UrlImgProyecto?.touched">    
@@ -21,7 +21,7 @@
                     <div class="col-12">
                         <label for="inputDescripcionProyAdd" class="form-label">Descripción</label>
                         <!-- <input type="text" class="form-control" id="inputDescripcion" placeholder="Descripción" required> -->
-                        <textarea formControlName="descripcion" class="form-control" name="" id="inputDescripcionProyAdd" cols="30" rows="5" placeholder="Descripción" required></textarea>
+                        <textarea formControlName="descripcion" class="form-control" name="" id="inputDescripcionProyAdd" cols="30" rows="5" placeholder="Descripción" [ngClass]="{'is-invalid': Descripcion?.errors && Descripcion?.touched, 'is-valid': !Descripcion?.errors && Descripcion?.touched}"></textarea>
                     </div>
                     <!-- Gracias al getter que configuramos en el controlador -->
                     <div *ngIf="Descripcion?.errors && Descripcion?.touched">    

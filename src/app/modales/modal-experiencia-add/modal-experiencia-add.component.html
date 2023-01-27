@@ -10,7 +10,7 @@
                 <form [formGroup]="form" (ngSubmit)="onEnviar($event)" class="row g-3">
                     <div class="col-12">
                         <label for="inputInstitucionExpAdd" class="form-label">Institución</label>
-                        <input type="text" formControlName="institucion" class="form-control" id="inputInstitucionExpAdd" placeholder="Nombre de la institución" required>
+                        <input type="text" formControlName="institucion" class="form-control" id="inputInstitucionExpAdd" placeholder="Nombre de la institución" [ngClass]="{'is-invalid': Institucion?.errors && Institucion?.touched, 'is-valid': !Institucion?.errors && Institucion?.touched}">
                     </div>
                     <!-- Gracias al getter que configuramos en el controlador -->
                     <div *ngIf="Institucion?.errors && Institucion?.touched">    
@@ -20,7 +20,7 @@
                     </div>
                     <div class="col-12">
                         <label for="inputAddressExpAdd" class="form-label">Dirección</label>
-                        <input type="text" formControlName="direccion" class="form-control" id="inputAddressExpAdd" placeholder="Calle, Avda ..." required>
+                        <input type="text" formControlName="direccion" class="form-control" id="inputAddressExpAdd" placeholder="Calle, Avda ..." [ngClass]="{'is-invalid': Direccion?.errors && Direccion?.touched, 'is-valid': !Direccion?.errors && Direccion?.touched}">
                     </div>
                     <!-- Gracias al getter que configuramos en el controlador -->
                     <div *ngIf="Direccion?.errors && Direccion?.touched">    
@@ -30,7 +30,7 @@
                     </div>
                     <div class="col-md-12">
                         <label for="inputPosicionExpAdd" class="form-label">Posición</label>
-                        <input type="text" formControlName="posicion" class="form-control" id="inputPosicionExpAdd" placeholder="Encargado, administrativo" required>
+                        <input type="text" formControlName="posicion" class="form-control" id="inputPosicionExpAdd" placeholder="Encargado, administrativo" [ngClass]="{'is-invalid': Posicion?.errors && Posicion?.touched, 'is-valid': !Posicion?.errors && Posicion?.touched}">
                     </div>
                     <!-- Gracias al getter que configuramos en el controlador -->
                     <div *ngIf="Posicion?.errors && Posicion?.touched">    
@@ -40,7 +40,7 @@
                     </div>
                     <div class="col-4">
                         <label for="inputFecInicioExpAdd" class="form-label">Fecha Inicio</label>
-                        <input type="date" formControlName="fecha_inicio" class="form-control" id="inputFecInicioExpAdd" placeholder="dd/mm/aaaa" required>
+                        <input type="date" formControlName="fecha_inicio" class="form-control" id="inputFecInicioExpAdd" placeholder="dd/mm/aaaa" [ngClass]="{'is-invalid': FechaInicio?.errors && FechaInicio?.touched, 'is-valid': !FechaInicio?.errors && FechaInicio?.touched}">
                     </div>
                     <!-- Gracias al getter que configuramos en el controlador -->
                     <div *ngIf="FechaInicio?.errors && FechaInicio?.touched">    
@@ -50,7 +50,7 @@
                     </div>
                     <div class="col-4">
                         <label for="inputFecFinalExpAdd" class="form-label">Fecha Final</label>
-                        <input type="date" formControlName="fecha_fin" class="form-control" id="inputFecFinalExpAdd" placeholder="dd/mm/aaaa" required>
+                        <input type="date" formControlName="fecha_fin" class="form-control" id="inputFecFinalExpAdd" placeholder="dd/mm/aaaa" [ngClass]="{'is-invalid': FechaFin?.errors && FechaFin?.touched, 'is-valid': !FechaFin?.errors && FechaFin?.touched}">
                     </div>
                     <!-- Gracias al getter que configuramos en el controlador -->
                     <div *ngIf="FechaFin?.errors && FechaFin?.touched">    
@@ -59,7 +59,7 @@
                         </p>
                     </div>
                     <div class="col-md-12 d-grid gap-2 d-md-flex justify-content-md-end">
-                        <button type="submit" class="btn btn-md rounded-3 btn-outline-success" data-bs-dismiss="modal">Grabar</button>
+                        <button type="submit" class="btn btn-md rounded-3 btn-outline-success">Grabar</button>
                     </div>
                 </form>
             </div>

@@ -10,7 +10,7 @@
                 <form [formGroup]="form" (ngSubmit)="onEnviar($event)" class="row g-3">
                     <div class="col-12">
                         <label for="inputInstitucionEdu" class="form-label">Institución</label>
-                        <input type="text" formControlName="institucion" class="form-control" id="inputInstitucionEdu" placeholder="Nombre de la institución" [(ngModel)]="educaService.estuMod.institucion">
+                        <input type="text" formControlName="institucion" class="form-control" id="inputInstitucionEdu" placeholder="Nombre de la institución" [(ngModel)]="educaService.estuMod.institucion" [ngClass]="{'is-invalid': Institucion?.errors && Institucion?.touched, 'is-valid': !Institucion?.errors && Institucion?.touched}">
                     </div>
                     <!-- Gracias al getter que configuramos en el controlador -->
                     <div *ngIf="Institucion?.errors && Institucion?.touched">    
@@ -20,7 +20,7 @@
                     </div>
                     <div class="col-12">
                         <label for="inputAddressEdu" class="form-label">Dirección</label>
-                        <input type="text" formControlName="direccion" class="form-control" id="inputAddressEdu" placeholder="Calle, Avda ..." [(ngModel)]="educaService.estuMod.direccion">
+                        <input type="text" formControlName="direccion" class="form-control" id="inputAddressEdu" placeholder="Calle, Avda ..." [(ngModel)]="educaService.estuMod.direccion" [ngClass]="{'is-invalid': Direccion?.errors && Direccion?.touched, 'is-valid': !Direccion?.errors && Direccion?.touched}">
                     </div>
                     <!-- Gracias al getter que configuramos en el controlador -->
                     <div *ngIf="Direccion?.errors && Direccion?.touched">    
@@ -30,7 +30,7 @@
                     </div>
                     <div class="col-12">
                         <label for="inputTituloEdu" class="form-label">Título</label>
-                        <input type="text" formControlName="titulo" class="form-control" id="inputTituloEdu" placeholder="Ingeniero, Contador, Profesor" [(ngModel)]="educaService.estuMod.titulo">
+                        <input type="text" formControlName="titulo" class="form-control" id="inputTituloEdu" placeholder="Ingeniero, Contador, Profesor" [(ngModel)]="educaService.estuMod.titulo" [ngClass]="{'is-invalid': Titulo?.errors && Titulo?.touched, 'is-valid': !Titulo?.errors && Titulo?.touched}">
                     </div>
                     <!-- Gracias al getter que configuramos en el controlador -->
                     <div *ngIf="Titulo?.errors && Titulo?.touched">    
@@ -40,7 +40,7 @@
                     </div>
                     <div class="col-4">
                         <label for="inputFecInicioEdu" class="form-label">Fecha Inicio</label>
-                        <input type="date" formControlName="fechaInicio" class="form-control" id="inputFecInicioEdu" placeholder="dd/mm/aaaa" [(ngModel)]="educaService.estuMod.fecha_inicio" required>
+                        <input type="date" formControlName="fechaInicio" class="form-control" id="inputFecInicioEdu" placeholder="dd/mm/aaaa" [(ngModel)]="educaService.estuMod.fecha_inicio" [ngClass]="{'is-invalid': FechaInicio?.errors && FechaInicio?.touched, 'is-valid': !FechaInicio?.errors && FechaInicio?.touched}">
                     </div>
                     <!-- Gracias al getter que configuramos en el controlador -->
                     <div *ngIf="FechaInicio?.errors && FechaInicio?.touched">    
@@ -50,7 +50,7 @@
                     </div>
                     <div class="col-4">
                         <label for="inputFecFinalEdu" class="form-label">Fecha Final</label>
-                        <input type="date" formControlName="fechaFin" class="form-control" id="inputFecFinalEdu" placeholder="dd/mm/aaaa" [(ngModel)]="educaService.estuMod.fecha_fin" required>
+                        <input type="date" formControlName="fechaFin" class="form-control" id="inputFecFinalEdu" placeholder="dd/mm/aaaa" [(ngModel)]="educaService.estuMod.fecha_fin" [ngClass]="{'is-invalid': FechaFin?.errors && FechaFin?.touched, 'is-valid': !FechaFin?.errors && FechaFin?.touched}">
                     </div>
                     <!-- Gracias al getter que configuramos en el controlador -->
                     <div *ngIf="FechaFin?.errors && FechaFin?.touched">    
@@ -59,7 +59,7 @@
                         </p>
                     </div>
                     <div class="col-md-12 d-grid gap-2 d-md-flex justify-content-md-end">
-                        <button type="submit" class="btn btn-md rounded-3 btn-outline-success" data-bs-dismiss="modal">Grabar</button>
+                        <button type="submit" class="btn btn-md rounded-3 btn-outline-success">Grabar</button>
                     </div>
                 </form>
             </div>
