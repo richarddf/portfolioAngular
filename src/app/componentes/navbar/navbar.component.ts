@@ -19,6 +19,7 @@ export class NavbarComponent implements OnInit {
 
   CerrarSesion(){
     sessionStorage.setItem('currentUser', 'null');
+    sessionStorage.setItem('idUser', "0");
     this.modoEdicion = false; 
     window.location.reload();
   }

@@ -8,11 +8,15 @@ import {
 import { Observable } from 'rxjs';
 import { AutenticacionService } from './autenticacion.service';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
+
 export class InterceptorInterceptor implements HttpInterceptor {
 
   constructor(private autenticacionServicio : AutenticacionService) {}
 
+  //intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     var currentUser = this.autenticacionServicio.usuarioAutenticado;
 

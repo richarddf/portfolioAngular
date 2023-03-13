@@ -26,6 +26,7 @@ export class ModalLoginComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    sessionStorage.setItem('currentUser', "");
   }
 
   get Password(){
@@ -46,23 +47,45 @@ export class ModalLoginComponent implements OnInit {
 
   onEnviar(event: Event){
     // Detenemos la propagación o ejecución del compotamiento submit de un form
-    event.preventDefault; 
+    //event.preventDefault; 
 
     if (this.form.valid){
       // Llamamos a nuestro servicio para enviar los datos al servidor
       // También podríamos ejecutar alguna lógica extra
       //alert("Todo salio bien ¡Enviar formulario!");
+      event.preventDefault; 
+
       this.autoService.loginPersona(this.form.value).subscribe(data => {
-        console.log("User: " + JSON.stringify(data));
-        console.log(data);
+        if (data === null || data === undefined)
+          {
+            alert("Credenciales no validas");
+          }else{
+            console.log("User: " + JSON.stringify(data));
+            console.log(data);
+            this.ruta.navigate(['']); 
+            window.location.reload();
+          }
+        
+      },            
+      error => {
+          alert("hay liooooo " + error);
       });
-      window.location.reload();
+      
+      //window.location.reload();
 
     }else{
       // Corremos todas las validaciones para que se ejecuten los mensajes de error en el template     
-      this.form.markAllAsTouched(); 
+      this.form.markAllAsTouched();
+      sessionStorage.setItem('currentUser', "null");
+      sessionStorage.setItem('idUser', "0");
+      //alert("Credenciales no validas");
     }
 
+  }
+
+  reset() {
+    //console.log("Se limpió el formulario");
+    this.form.reset();
   }
 
 }
