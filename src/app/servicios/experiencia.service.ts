@@ -10,7 +10,7 @@ import { Experiencia } from '../entidades/experiencia';
 export class ExperienciaService {
 
   //url = "http://localhost:8080/experiencia/"
-  url : string = environment.apiURL + "experiencia/"
+  url : string = environment.apiURL + "/experiencia/"
 
   experMod: Experiencia = {
     id: null ?? 0,
