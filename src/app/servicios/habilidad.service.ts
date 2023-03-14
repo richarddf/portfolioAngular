@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment.prod';
 import { Habilidad } from '../entidades/habilidad';
 
 @Injectable({
@@ -8,7 +9,8 @@ import { Habilidad } from '../entidades/habilidad';
 })
 export class HabilidadService {
 
-  url = "http://localhost:8080/habilidad/"
+  //url = "http://localhost:8080/habilidad/"
+  url : string = environment.apiURL + "/habilidad/";
 
   habilMod: Habilidad = {
     id: null ?? 0,

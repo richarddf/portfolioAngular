@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment.prod';
 import { Experiencia } from '../entidades/experiencia';
 
 @Injectable({
@@ -8,7 +9,8 @@ import { Experiencia } from '../entidades/experiencia';
 })
 export class ExperienciaService {
 
-  url = "http://localhost:8080/experiencia/"
+  //url = "http://localhost:8080/experiencia/"
+  url : string = environment.apiURL + "experiencia/"
 
   experMod: Experiencia = {
     id: null ?? 0,

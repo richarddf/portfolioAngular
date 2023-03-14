@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment.prod';
 import { Red } from '../entidades/red';
 
 @Injectable({
@@ -8,7 +9,8 @@ import { Red } from '../entidades/red';
 })
 export class RedService {
 
-  url = "http://localhost:8080/red/"
+  //url = "http://localhost:8080/red/"
+  url : string = environment.apiURL + "/red/";
 
   constructor(private httpClient: HttpClient) { }
 

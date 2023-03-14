@@ -2,6 +2,7 @@ import { formatDate } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment.prod';
 import { Estudio } from '../entidades/estudio';
 
 @Injectable({
@@ -9,7 +10,8 @@ import { Estudio } from '../entidades/estudio';
 })
 export class EstudioService {
 
-  url = "http://localhost:8080/estudio/"
+  //url = "http://localhost:8080/estudio/"
+  url : string = environment.apiURL + "/estudio/";
 
   estuMod: Estudio = {
     id: null ?? 0,
