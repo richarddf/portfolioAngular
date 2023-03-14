@@ -57,13 +57,13 @@ export class ModalHabilidadAddComponent implements OnInit {
   }
 
   onEnviar(event: Event){
-    // Detenemos la propagación o ejecución del compotamiento submit de un form
-    event.preventDefault; 
 
     if (this.form.valid){
-      // Llamamos a nuestro servicio para enviar los datos al servidor
-      // También podríamos ejecutar alguna lógica extra
+      // Detenemos la propagación o ejecución del compotamiento submit de un form
+      event.preventDefault;
       try {
+        // Llamamos a nuestro servicio para enviar los datos al servidor
+        // También podríamos ejecutar alguna lógica extra
         this.habilService.agregarHabilidad(this.form.value).subscribe(data => {
           this.habilService.habilMod = data;
           console.log(data);
